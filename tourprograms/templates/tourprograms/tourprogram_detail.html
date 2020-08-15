@@ -31,6 +31,13 @@
                     <p class="mb-0">{{ tourprogram.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">Adult: {{ tourprogram.price_adult }} SEK</p>
                     <p class="lead mb-0 text-left font-weight-bold">Child: {{ tourprogram.price_child }} SEK</p>
+                    {% if tourprogram.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'tourprograms' %}?category={{ tourprogram.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ tourprogram.category.friendly_name }}
+                            </a>
+                        </p>
+                    {% endif %}                        
                     {% if tourprogram.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ tourprogram.rating }} / 5</small>
                     {% else %}
