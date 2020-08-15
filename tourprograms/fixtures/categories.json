@@ -1,0 +1,66 @@
+[
+    {
+        "pk": 1,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "summer_tracking",
+            "friendly_name": "Summer Tracking"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "summer_attraction",
+            "friendly_name": "Summer Attraction"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "summer_sightseeing",
+            "friendly_name": "Summer Sightseeing"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "Winter_aurora",
+            "friendly_name": "Winter Aurora Tour"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "Winter_attraction",
+            "friendly_name": "Winter Attraction"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "winter_sightseeing",
+            "friendly_name": "Winter Sightseeing"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "winter_wildanimal",
+            "friendly_name": "Winter with Wild Animal"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "tourprograms.category",
+        "fields": {
+            "name": "wilderness_meal",
+            "friendly_name": "Wilderness Meal"
+        }
+    }
+]

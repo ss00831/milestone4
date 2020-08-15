@@ -1,0 +1,71 @@
+[
+    {
+        "pk": 1,
+        "model": "tourprograms.tourprogram",
+        "fields": {
+            "sku": "pp5001340155",
+            "category": 1,
+            "name": "HIKING WITH GUIDE IN NORTH - Midnight sun",
+            "region": "Luossavaara",
+            "maximum": "15",
+            "price_adult": 850,
+            "price_child": 450,
+            "departure_date": "Every Monday, Thursday, Saturday / 21:00",
+            "estimated_times" : "3-4 hours",
+            "description": "Hiking – Midnight sun We travel by minibus and walk about 3-4 km along the mountain Luossavaaras east side. After the path up to the mountain there is much to see and experience in terms of nature (flora, fauna, geology), history of the mine and facts about the future of the city. On the top we have the best view to see the midnight sun, there we enjoy a cup of coffee/tea and a lovely reindeer meat sandwich and for dessert a delicious homemade Kiruna Sunset Cake with cream and cloudberries.",
+            "rating": 3.6,
+            "included": "Guide, transfer",
+            "not_included": "Food",
+            "meeting_place": "Kiruna Bus station",
+            "note": "Evening time is quite cold, please take a warm jacket",
+            "image_url": "https://media.newmindmedia.com/TellUs/image/?file=20180701_102645_378574382.jpg&dh=354&dw=630&cropX=0&cropY=288&cropH=2592&cropW=4608&w=760&h=426",
+            "image": "tourprogram001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tourprograms.tourprogram",
+        "fields": {
+            "sku": "pp5001340156",
+            "category": 1,
+            "tourname": "NATURE GUIDE – FOREST BATH",
+            "region": "Kiruna",
+            "maximum": "8",
+            "price_adult": 950,
+            "price_child": 500,
+            "departure_date": "Every Monday, Thursday, Saturday / 10:00",
+            "estimated_times": "3-4 hours",
+            "description": "A short hike in the forest and mountains where we experience nature with all our senses. Today, many people feel stressed and we are constantly exposed to noisy environments. The forest and the mountains provide tranquility, joy and well-being. Maybe you will hear the sound of rippling water, the buzzing wind, the chirping of birds, the memory of sounds that are deeply rooted in our genes from the time humans were collectors and hunters. During the tour you will receive guidance and tools to see nature just as it is, part of you.",
+            "rating": 4.2,
+            "included": "Transfer, guide, coffee/tea, sandwich with reindeer meat, cookies",
+            "not_included": "xx",
+            "meeting_place": "We will pick-up you 10:00 at your hotel",
+            "note": "Child: 15-18 yrs",
+            "image_url": "https://media.newmindmedia.com/TellUs/image/?file=Skogsbad2_GiN_foto_Jessica_Nild_n_1962635589.jpg&dh=420&dw=630&w=760&h=426",
+            "image": "tourprogram002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tourprograms.tourprogram",
+        "fields": {
+            "sku": "pp5001340157",
+            "category": 1,
+            "tourname": "NATURE GUIDE – FOREST BATH",
+            "region": "Kiruna",
+            "maximum": "8",
+            "price_adult": 950,
+            "price_child": 500,
+            "departure_date": "Every Monday, Thursday, Saturday / 10:00",
+            "estimated_times": "3-4 hours",
+            "description": "A short hike in the forest and mountains where we experience nature with all our senses. Today, many people feel stressed and we are constantly exposed to noisy environments. The forest and the mountains provide tranquility, joy and well-being. Maybe you will hear the sound of rippling water, the buzzing wind, the chirping of birds, the memory of sounds that are deeply rooted in our genes from the time humans were collectors and hunters. During the tour you will receive guidance and tools to see nature just as it is, part of you.",
+            "rating": 4.2,
+            "included": "Transfer, guide, coffee/tea, sandwich with reindeer meat, cookies",
+            "not_included": "xx",
+            "meeting_place": "We will pick-up you 10:00 at your hotel",
+            "note": "Child: 15-18 yrs",
+            "image_url": "https://media.newmindmedia.com/TellUs/image/?file=Skogsbad2_GiN_foto_Jessica_Nild_n_1962635589.jpg&dh=420&dw=630&w=760&h=426",
+            "image": "tourprogram002.jpg"
+        }
+    }
+]
