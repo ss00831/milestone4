@@ -1,39 +1,75 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Lapland in Sweden
+- 
 
-Welcome USER_NAME,
+## UX
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+### Preview
+- Desktop
 
-## Gitpod Reminders
+- Tablet
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- Mobile
 
-`python3 -m http.server`
+### User Scenario
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+### Wireframes
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+## Features
 
-Another blue button should appear to click: *Open Browser*.
+### Existing Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+### Features Left to Implement
 
-## Updates Since The Instructional Video
+## Information Architecture
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+### Menu structure
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Database
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Technologies Used
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Language
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- HTML5
+- CSS3
+- JavaScript
+- Python
 
---------
+### Tools & Libraries
 
-Happy coding!
+- Django 3.1 (https://www.djangoproject.com/)
+- JQuery 3.5.1 (https://jquery.com)
+- Bootstrap 4.5.2 (https://getbootstrap.com/)
+- Fontawesome 5.14.0 (https://fontawesome.com/)
+- Google font (https://fonts.google.com/)
+- Github (https://github.com/)
+- Gitpod (https://www.gitpod.io/)
+- Heroku (https://www.heroku.com/): For deployment
+- Amazon AWS (https://aws.amazon.com/?nc1=h_ls): To store contents (images)
+
+### APIs
+- 
+
+## Testing
+
+### Manual Testing
+
+### Testing history
+
+## deployment
+
+### My Milestone4 page address:
+
+### To deploy this page to GitHub Pages from its GitHub repository (https://github.com/ss00831/milestone4) :
+
+### How to run this project locally
+
+## Credits
+
+### contents
+
+### Media
+
+### Acknowledgements
