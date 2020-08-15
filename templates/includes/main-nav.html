@@ -5,10 +5,10 @@
                 All Tours
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-tours-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Season</a>
-                <a href="" class="dropdown-item">By Region</a>
-                <a href="" class="dropdown-item">By Rating</a>
+                <a href="{% url 'tourprograms' %}?sort=price_adult&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'tourprograms' %}?sort=category&direction=asc" class="dropdown-item">By Season</a>
+                <a href="{% url 'tourprograms' %}?sort=region&direction=asc" class="dropdown-item">By Region</a>
+                <a href="{% url 'tourprograms' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'tourprograms' %}" class="dropdown-item">All Tours</a>
             </div>
         </li>
@@ -18,10 +18,10 @@
                 Summer Tours
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="summer-link">
-                <a href="" class="dropdown-item">Tracking</a>
-                <a href="" class="dropdown-item">Attraction</a>
-                <a href="" class="dropdown-item">Sightseeing</a>
-                <a href="" class="dropdown-item">All Summer Tours</a>
+                <a href="{% url 'tourprograms' %}?category=summer_tracking" class="dropdown-item">Tracking</a>
+                <a href="{% url 'tourprograms' %}?category=summer_attraction" class="dropdown-item">Attraction</a>
+                <a href="{% url 'tourprograms' %}?category=summer_sightseeing" class="dropdown-item">Sightseeing</a>
+                <a href="{% url 'tourprograms' %}?category=summer_tracking,summer_attraction,summer_sightseeing" class="dropdown-item">All Summer Tours</a>
             </div>
         </li>
 
@@ -30,11 +30,11 @@
                 Winter tours
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="winter-link">
-                <a href="" class="dropdown-item">Aurora tour</a>
-                <a href="" class="dropdown-item">Attraction</a>
-                <a href="" class="dropdown-item">Sightseeing</a>
-                <a href="" class="dropdown-item">With Wild Animal</a>
-                <a href="" class="dropdown-item">All Winter Tours</a>
+                <a href="{% url 'tourprograms' %}?category=Winter_aurora" class="dropdown-item">Aurora tour</a>
+                <a href="{% url 'tourprograms' %}?category=Winter_attraction" class="dropdown-item">Attraction</a>
+                <a href="{% url 'tourprograms' %}?category=winter_sightseeing" class="dropdown-item">Sightseeing</a>
+                <a href="{% url 'tourprograms' %}?category=winter_wildanimal" class="dropdown-item">With Wild Animal</a>
+                <a href="{% url 'tourprograms' %}?category=Winter_aurora,Winter_attraction,winter_sightseeing,winter_wildanimal" class="dropdown-item">All Winter Tours</a>
             </div>
         </li>
 
@@ -43,7 +43,7 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Wilderness Meal</a>                
+                <a href="{% url 'tourprograms' %}?category=wilderness_meal" class="dropdown-item">Wilderness Meal</a>                
             </div>
         </li>
     </ul>
