@@ -18,15 +18,15 @@ def cart_contents(request):
     gift_event_1 = settings.GIFT_THRESHOLD_1
     gift_event_2 = settings.GIFT_THRESHOLD_2
 
-    for item_id, item_data in cart.items():
+    for item_id, number_people_adult in cart.items():
         tourprogram = get_object_or_404(Tourprogram, pk=item_id)
-        total_adult += item_data * tourprogram.priceadult
+        total_adult += number_people_adult * tourprogram.priceadult
         #total_child += number_people_child * tourprogram.pricechild
         
-        tourprogram_count += item_data
+        tourprogram_count += number_people_adult
         cart_items.append({
             'item_id': item_id,
-            'number_people_adult': item_data,
+            'number_people_adult': number_people_adult,
             #'number_people_child': number_people_child,
             'tourprogram': tourprogram,
         })
