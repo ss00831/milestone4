@@ -41,7 +41,7 @@ def adjust_cart(request, item_id):
 
     if number_people_adult > 0:
         cart[item_id] = number_people_adult
-        messages.success(request, f'Updated {tourprogram.name} quantity to {cart[item_id]}')
+        messages.success(request, f'Updated {tourprogram.name} number of adults {cart[item_id]}')
     else:
         cart.pop(item_id)
         messages.success(request, f'Removed {tourprogram.name} from your cart')

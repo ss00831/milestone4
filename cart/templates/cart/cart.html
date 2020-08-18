@@ -30,19 +30,20 @@
                                 <tr>
                                     <th scope="col">Tour Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price of Adult</th>
-                                    <th scope="col">People of Adult</th>
+                                    <th scope="col" class="cart-field-name">Price of <br>Adult</th>
+                                    <th scope="col" class="cart-field-name">People of <br>Adult</th>
                                     
-                                    <th scope="col">Price of Child</th>
-                                    <th scope="col">People of Child</th>
+                                    <th scope="col" class="cart-field-name">Price of <br>Child</th>
+                                    <th scope="col" class="cart-field-name">People of <br>Child</th>
 
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col" class="cart-field-name">Subtotal</th>
+                                    <th scope="col" class="cart-field-name"></th>
                                 </tr>
                             </thead>
 
                             {% for item in cart_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
+                                    <td class="py-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.tourprogram.image_url }}">
                                     </td>
                                     <td class="py-3">
@@ -52,11 +53,10 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.tourprogram.priceadult }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
-                                        <!--<p class="my-0">{{ item.number_people_adult }}</p>-->
+                                    <td class="py-3">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                             {% csrf_token %}
-                                            <div class="form-group w-50">
+                                            <div class="form-group w-75">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <button class="decrement-ppl btn btn-sm btn-black rounded-0" 
@@ -82,17 +82,48 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-tourprogram_size="{{ item.size }}"><small>Remove</small></a>
+                                        
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.tourprogram.pricechild }}</p>
                                     </td>
                                     
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.number_people_child }}</p>
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                            {% csrf_token %}
+                                            <div class="form-group w-75">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-ppl-child btn btn-sm btn-black rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-ppl-child_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm ppl-child_input" type="number"
+                                                        name="number_people_child" value="{{ item.number_people_child }}" min="0" max="15"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_ppl-child_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-ppl-child btn btn-sm btn-black rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-ppl-child_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }}</p>
+                                    </td>
+                                    
+                                    <td class="py-3">
+                                                                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-tourprogram_size="{{ item.size }}"><span class="icon"><i class="fas fa-trash-alt"></i></span></a>
                                     </td>
                                 </tr>
                             {% endfor %}

@@ -70,6 +70,10 @@ body {
 	z-index: -1;
 }
 
+.cart-field-name{
+    font-size: 0.75rem;
+}
+
 .gift-notice {
     background:#09002b !important;
 }
