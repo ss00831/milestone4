@@ -92,6 +92,13 @@ body {
     cursor: pointer;
 }
 
+.cashfree-note{
+    color: red;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
