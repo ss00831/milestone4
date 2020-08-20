@@ -47,7 +47,7 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <h5 class="lead mb-0 text-left font-weight-bold">Departure date: </h5>
-                    <input class="datepicker" name="departure_date" type="date" required="">
+                    <input class="datepicker" name="departure_date" type="date">
 
                     <form class="form" action="{% url 'add_to_cart' tourprogram.id %}" method="POST">
                         {% csrf_token %}
@@ -151,5 +151,4 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'tourprograms/includes/people_input_script.html' %}
-<script src="{% static 'tourprograms/js/tourprograms_element.js' %}"></script>
 {% endblock %}
