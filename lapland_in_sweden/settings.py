@@ -167,5 +167,4 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-GIFT_THRESHOLD_1 = 1500
-GIFT_THRESHOLD_2 = 3000
+GIFT_THRESHOLD = 2000

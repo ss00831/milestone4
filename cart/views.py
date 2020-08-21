@@ -11,25 +11,35 @@ def view_cart(request):
     return render(request, 'cart/cart.html')
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified product to the cart  """
+    """ Add a quantity of the specified product to the shopping bag """
 
-    tourprogram = get_object_or_404(Tourprogram, pk=item_id)
     number_people_adult = int(request.POST.get('number_people_adult'))
     #number_people_child = int(request.POST.get('number_people_child'))
     #ttl_people = number_people_adult + number_people_child
+    #select_departure_date = request.POST.get('select_departure_date')
     redirect_url = request.POST.get('redirect_url')
+    date = None
+
+    if 'select_departure_date' in request.POST:
+        date = request.POST['select_departure_date']
     cart = request.session.get('cart', {})
 
-    if item_id in list(cart.keys()):
-        cart[item_id] += number_people_adult
-        messages.success(request, f'Updated {tourprogram.name} people to {cart[item_id]}')
+    if date: 
+        if item_id in list(cart.keys()):
+            if date in cart[item_id]['items_by_date'].keys():
+                cart[item_id]['items_by_date'][date] += number_people_adult
+            else:
+                cart[item_id]['items_by_date'][date] = number_people_adult
+        else:
+            cart[item_id] = {'items_by_date': {date: number_people_adult}}
     else:
-        cart[item_id] = number_people_adult
-        messages.success(request, f'Added {tourprogram.name} to your cart')
+        if item_id in list(cart.keys()):
+            cart[item_id] += number_people_adult
+        else:
+            cart[item_id] += number_people_adult
 
     request.session['cart'] = cart
     return redirect(redirect_url)
-
 
 def adjust_cart(request, item_id):
     """Adjust the number of people of the specified tour program to the specified amount"""

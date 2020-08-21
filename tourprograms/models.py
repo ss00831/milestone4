@@ -20,6 +20,7 @@ class Tourprogram(models.Model):
     name = models.CharField(max_length=254)
     region = models.CharField(max_length=254)
     maximum = models.CharField(max_length=254)
+    date = models.DateTimeField(auto_now_add=True)
     priceadult = models.IntegerField()
     pricechild = models.IntegerField()
     departure_date = models.CharField(max_length=254)

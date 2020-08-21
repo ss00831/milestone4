@@ -1,10 +1,8 @@
 <script type="text/javascript">
-    $(function () {
-        $('.datepicker').datepicker({
-            minDate: 0
-        });
-     });
-
+    $(function() {
+        $('#id_select_departure_date').datetimepicker();
+    });
+    
     // Disable +/- buttons outside 1-15 range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_ppl_${itemId}`).val());

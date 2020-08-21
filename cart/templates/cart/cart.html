@@ -25,6 +25,9 @@
             <div class="col">
                 {% if cart_items %}
                     <div class="table-responsive rounded">
+                        {{ cart_items }}
+                        <br><br>
+                        {{ request.sessing.cart}}
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -48,6 +51,7 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.tourprogram.name }}</strong></p>
+                                        <p class="my-0"><strong>Date: </strong>{{ item.date|upper }}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.tourprogram.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
