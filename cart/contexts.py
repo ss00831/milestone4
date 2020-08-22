@@ -5,15 +5,12 @@ from tourprograms.models import Tourprogram
 
 
 def cart_contents(request):
+
     cart_items = []
     total_adult = 0
-    #total_child = 0
     tourprogram_count = 0
     cart = request.session.get('cart', {})
-    #number_people_adult = request.form.get('number_people_adult')
-    #number_people_child = request.form.get('number_people_child')
-    # ttl_people = number_people_adult + number_people_child
-
+    
     gift_event = settings.GIFT_THRESHOLD
 
     for item_id, item_data in cart.items():
@@ -24,7 +21,6 @@ def cart_contents(request):
             cart_items.append({
                 'item_id': item_id,
                 'number_people_adult': item_data,
-                # 'number_people_child': number_people_child,
                 'tourprogram': tourprogram,
             })
         else: 
@@ -39,12 +35,11 @@ def cart_contents(request):
                     'date': date,
                 })
     
-    grand_total = total_adult  # + total_child
+    grand_total = total_adult
     
     context = {
         'cart_items': cart_items,
         'total_adult': total_adult,
-        #'total_child': total_child,
         'tourprogram_count': tourprogram_count,
         'gift_event': gift_event,
         'gift_threshold': settings.GIFT_THRESHOLD,
