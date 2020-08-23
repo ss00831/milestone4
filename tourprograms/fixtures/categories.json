@@ -32,7 +32,7 @@
         }
     },
     {
-        "pk": 4,
+        "pk": 5,
         "model": "tourprograms.category",
         "fields": {
             "name": "Winter_attraction",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "pk": 5,
+        "pk": 6,
         "model": "tourprograms.category",
         "fields": {
             "name": "winter_sightseeing",
@@ -48,7 +48,7 @@
         }
     },
     {
-        "pk": 6,
+        "pk": 7,
         "model": "tourprograms.category",
         "fields": {
             "name": "winter_wildanimal",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "pk": 7,
+        "pk": 8,
         "model": "tourprograms.category",
         "fields": {
             "name": "wilderness_meal",
