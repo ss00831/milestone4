@@ -34,6 +34,11 @@ def cart_contents(request):
                     'tourprogram': tourprogram,
                     'date': date,
                 })
+
+    if total_adult < settings.GIFT_THRESHOLD:
+        gift_event = settings.GIFT_THRESHOLD - total_adult
+    else:        
+        gift_event = 0
     
     grand_total = total_adult
     
