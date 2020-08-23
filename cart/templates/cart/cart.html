@@ -69,7 +69,7 @@
                                                         </button>
                                                     </div>
                                                     <input class="form-control form-control-sm ppl_input" type="number"
-                                                        name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="15"
+                                                        name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="{{ tourprogram.maximum }}"
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_ppl_{{ item.item_id }}">
                                                     <div class="input-group-append">
