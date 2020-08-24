@@ -42,7 +42,7 @@ def checkout(request):
                                 order=order,
                                 tourprogram=tourprogram,
                                 number_people_adult=number_people_adult,
-                                #date=date,
+                                select_departure_date=date,
                             )
                             order_line_item.save()
                 except Tourprogram.DoesNotExist:
@@ -93,6 +93,7 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully processed! \
