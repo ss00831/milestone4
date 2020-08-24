@@ -28,7 +28,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.grand_total = self.order_total
         self.save()
 
@@ -57,7 +57,7 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.tourprogram.price * self.number_people_adult
+        self.lineitem_total = self.tourprogram.priceadult * self.number_people_adult
         super().save(*args, **kwargs)
 
     def __str__(self):
