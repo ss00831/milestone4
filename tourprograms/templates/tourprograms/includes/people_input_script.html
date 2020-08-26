@@ -1,9 +1,8 @@
 <script type="text/javascript">
-    $(function() {
-        $('#id_select_departure_date').datetimepicker({
-            'minDateTime': new Date()
+     $(function () {
+        $('#id_select_departure_date').datepicker({
+            startDate: '-0m'
         });
-        
     });
     
     // Disable +/- buttons outside 1-15 range

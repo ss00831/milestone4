@@ -57,11 +57,15 @@
                                     <td>
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
+                                                
                                                 <li class="small">
                                                     
-                                                        Departure date {{ item.date }}
                                                     {{ item.tourprogram.name }} x{{ item.number_people_adult }}
                                                 </li>
+                                                <li class="small">
+                                                    Departure date {{ item.date }}
+                                                </li>
+                                                
                                             {% endfor %}
                                         </ul>
                                     </td>

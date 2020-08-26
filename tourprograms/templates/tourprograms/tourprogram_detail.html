@@ -51,13 +51,16 @@
                         {% csrf_token %}
                         <div class="form-row">
                         <div class="col-12">
-                                <p class="mt-3"><strong>Departure date:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <input class="datepicker" type="date" name="select_departure_date" id="id_select_departure_date" required>
+                            <p class="mt-3"><strong>Departure date:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
                                     </div>
+                                <input class="form-control" id="id_select_departure_date" name="select_departure_date" type="text"  placeholder="MM/DD/YYYY" required>            
                                 </div>
                             </div>
+                        </div>        
 
                             <div class="col-12">
                                 <p class="mt-3"><strong>Number of Adult:</strong></p>
