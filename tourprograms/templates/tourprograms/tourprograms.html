@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Tour Programs</h2>
+                <h2 class="logo-font page-top">Tour Programs</h2>
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'tourprograms' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -69,8 +69,8 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">Adult: {{ tourprogram.priceadult }} SEK</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">Child: {{ tourprogram.pricechild }} SEK</p>
+                                            <p class="lead mb-0 text-left">Adult: {{ tourprogram.priceadult }} SEK</p>
+                                            <p class="lead mb-0 text-left child-event-old">Child: {{ tourprogram.pricechild }} SEK</p><p class="lead mb-0 text-left font-weight-bold child-event"> <i class="far fa-hand-point-right"></i> free!</p>
                                             {% if tourprogram.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'tourprograms' %}?category={{ tourprogram.category.name }}">

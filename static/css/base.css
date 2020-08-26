@@ -10,6 +10,10 @@ body {
     font-family: 'Lato';
 }
 
+.page-top{
+    margin-top: 4.5rem;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -19,11 +23,12 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
+.nav-item > .logo-font{
     text-transform: capitalize;
+    font-size:1.125rem;
 }
 
-.nav-link > .logo-font {
+.nav-link > .logo-font > strong{
     text-transform: uppercase;
 }
 
@@ -32,7 +37,8 @@ body {
 }
 
 .see-our-tour-button {
-    background: #0e0336;
+    margin-top: 4rem;
+    background: #00075c;
     color: white;
     min-width: 260px;
 }
@@ -58,6 +64,22 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.card > a > img{
+    height: 12rem;
+}
+
+.image-container > a > img{
+    height: 26rem;
+}
+
+.cart-img{
+    height: 10.2rem;
+}
+
+.order-lg-last > a > img{
+    height: 5.15rem;
 }
 
 .overlay {
@@ -90,6 +112,26 @@ body {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+.child-event-old{
+    text-decoration:line-through;
+    font-size: 1rem;
+    
+}
+
+.child-event{
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+.tourprogram-details-container > h5, .child-event{
+    margin-bottom: 0.75rem;
+}
+
+.note-group{
+    color: red;   
 }
 
 .cashfree-note{
