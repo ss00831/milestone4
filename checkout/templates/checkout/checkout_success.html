@@ -138,6 +138,13 @@
                     </div>
                 </div>
             </div>
+            {% if order.grand_total >= gift_event %}
+            <div class="col-12 col-lg-5">
+                Don't forget our present!
+                <br>
+                You have paid more than {{ gift_event }} SEK, you can get a gift.
+            </div>
+            {% endif %}
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
