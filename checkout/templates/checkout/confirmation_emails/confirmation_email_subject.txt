@@ -1,1 +1,1 @@
-Lapland in Sweden booking confirmation for Order Number {{ order.order_number }}
+Lapland in Sweden: Booking confirmation for Order Number {{ order.order_number }}
