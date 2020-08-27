@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'contact',
 
     # Other
     'crispy_forms',
@@ -175,3 +176,4 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'laplandinsweden@example.com'
+DEFAULT_TO_EMAIL = 'songhei_831.lee@hotmail.com'

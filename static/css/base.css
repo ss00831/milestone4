@@ -23,6 +23,14 @@ body {
     width: 1.5rem;
 }
 
+#topnav, .navbar{
+    background: #bee6c2;
+}
+
+.dropdown-menu{
+    background: #dce8de;
+}
+
 .nav-item > .logo-font{
     text-transform: capitalize;
     font-size:1.125rem;
@@ -34,6 +42,10 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.cart-info{
+    color: #060057;
 }
 
 .see-our-tour-button {
@@ -97,7 +109,13 @@ body {
 }
 
 .gift-notice {
-    background:#09002b !important;
+    background:#045e19;
+}
+
+
+
+#contact-link{
+    background:#ebaecf
 }
 
 .btt-button {
