@@ -1,10 +1,17 @@
 <script type="text/javascript">
-     $(function () {
+    $(function () {
         $('#id_select_departure_date').datepicker({
             startDate: '-0m'
         });
     });
-    
+
+    function Updatelink(itemId) {
+        var currentValue = parseInt($(`#id_ppl_${itemId}`).val());
+        var form = $(this).prev('.update-form');
+        form.submit();
+    }
+
+
     // Disable +/- buttons outside 1-15 range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_ppl_${itemId}`).val());

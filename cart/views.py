@@ -3,6 +3,8 @@ from django.contrib import messages
 
 from tourprograms.models import Tourprogram
 
+import math
+
 
 def view_cart(request):
     """ A view that renders the cart contents page """
@@ -56,37 +58,44 @@ def add_to_cart(request, item_id):
 def adjust_cart(request, item_id):
     """Adjust the number of people of the specified tour program to the specified amount"""
     tourprogram = get_object_or_404(Tourprogram, pk=item_id)
-    number_people_adult = int(request.POST.get('number_people_adult'))
+    number_people_adult = int('0'+request.POST.get('number_people_adult'))
+    maximum = tourprogram.maximum
     date = None
     if 'select_departure_date' in request.POST:
         date = request.POST['select_departure_date']
     cart = request.session.get('cart', {})
 
     if date:
-        if number_people_adult > 0:
+        if number_people_adult > 0 and number_people_adult <= maximum:
             cart[item_id]['items_by_date'][date] = number_people_adult
             messages.success(request,
                              (f'Updated date {date.upper()} '
                               f'{tourprogram.name} people to '
                               f'{cart[item_id]["items_by_date"][date]}'))
+        elif number_people_adult == 0:
+            messages.error(request, '0 and null value are not acceptable. If you want to remove this item, please click remove button.')
+        elif number_people_adult < 0:
+            messages.error(request, 'Wrong.')
+
         else:
-            del cart[item_id]['items_by_date'][date]
+            messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
+            #del cart[item_id]['items_by_date'][date]
             if not cart[item_id]['items_by_date']:
-                cart.pop(item_id)
-            messages.success(request,
-                             (f'Removed date {date.upper()} '
-                              f'{tourprogram.name} from your cart'))
+            #    cart.pop(item_id)
+                messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
     else:
-        if number_people_adult > 0:
+        if number_people_adult > 0 and number_people_adult <= maximum:
             cart[item_id] = number_people_adult
             messages.success(request,
                              (f'Updated {tourprogram.name} '
                               f'people to {cart[item_id]}'))
+        elif number_people_adult == 0:
+            messages.error(request, '0 and null value are not acceptable. If you want to remove this item, please click remove button.')
+        elif math.isinf(number_people_adult) == False:
+            messages.error(request, 'Wrong.')
         else:
-            cart.pop(item_id)
-            messages.success(request,
-                             (f'Removed {tourprogram.name} '
-                              f'from your cart'))
+            # cart.pop(item_id)
+            messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
