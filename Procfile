@@ -1,0 +1,1 @@
+web: gunicorn lapland_in_sweden.wsgi:application
