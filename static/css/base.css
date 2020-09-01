@@ -6,12 +6,12 @@ body {
     background: url('/media/index_img_1.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    
     font-family: 'Lato';
 }
 
 .page-top{
-    margin-top: 4.5rem;
+    margin: 3.5rem 0 0 1.25rem;
 }
 
 /* from Bulma */
@@ -55,6 +55,20 @@ body {
     min-width: 260px;
 }
 
+.small-info{
+    background:#92d6f7;
+    padding: 0.625rem 0;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: .5rem;
+}
+
+.detail_item{
+    margin-bottom: .25rem;
+}
+
 .btn-black {
     background: black;
     color: white;
@@ -90,6 +104,10 @@ body {
     height: 10.2rem;
 }
 
+.remove-item{
+    font-size: 2rem;
+}
+
 .order-lg-last > a > img{
     height: 5.15rem;
 }
@@ -112,10 +130,18 @@ body {
     background:#045e19;
 }
 
-
-
 #contact-link{
     background:#ebaecf
+}
+
+.detail_item{
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.detail_item > p{
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .btt-button {
@@ -132,16 +158,20 @@ body {
     cursor: pointer;
 }
 
+.adult-price{
+    font-size: 1.125rem;
+}
+
 .child-event-old{
     text-decoration:line-through;
-    font-size: 1rem;
+    font-size: 0.875rem;
     
 }
 
 .child-event{
     color: red;
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .tourprogram-details-container > h5, .child-event{
@@ -149,7 +179,16 @@ body {
 }
 
 .note-group{
+    background:#ffffc9;   
+}
+
+.note-group > p{
     color: red;   
+}
+
+.note-group > a{
+    font-weight: 600;
+    color: #7429ff;
 }
 
 .cashfree-note{
@@ -295,6 +334,15 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+@media (max-width: 1080px) {
+    .image-container > a > img{
+        height: 18rem;
+    }
+    .main-logo-link > .logo-font{
+        font-size: 1.875rem;
+    }
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -318,5 +366,51 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+    .card > a > img{
+        height: 15.5rem;
+    }
+    .cart-img{
+        height: 8.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .small-info{
+        margin-bottom: 0;
+    }
+    .image-container > a > img{
+        height: 11rem;
+    }
+    .card > a > img{
+        height: 11rem;
+    }
+}
+@media (max-width: 640.02px) {
+    .cart_list{
+        font-size: 0.75rem;
+    }
+    .cart-img {
+        height: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .image-container > a > img{
+        height: auto;
+    }
+    .card > a > img{
+        height: auto;
+    }
+}
+@media (max-width: 350.02px) {
+    .remove-item{
+        font-size: 1.25rem;
+    }
+    .table-sm td, .table-sm th {
+        padding: .2rem;
+    }
+    .order-number{
+        word-wrap: break-word;
     }
 }

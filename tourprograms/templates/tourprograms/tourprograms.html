@@ -64,12 +64,12 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ tourprogram.name }}</p>
+                                    <p class="mb-0"><strong>{{ tourprogram.name }}</strong></p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left">Adult: {{ tourprogram.priceadult }} SEK</p>
+                                            <p class="lead mb-0 text-left adult-price">Adult: {{ tourprogram.priceadult }} SEK</p>
                                             <p class="lead mb-0 text-left child-event-old">Child: {{ tourprogram.pricechild }} SEK</p><p class="lead mb-0 text-left font-weight-bold child-event"> <i class="far fa-hand-point-right"></i> free!</p>
                                             {% if tourprogram.category %}
                                             <p class="small mt-1 mb-0">

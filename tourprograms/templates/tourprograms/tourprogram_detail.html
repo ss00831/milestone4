@@ -51,7 +51,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                         <div class="col-12">
-                            <p class="mt-3"><strong>Departure date:</strong></p>
+                            <p class="detail_item"><strong>Departure date:</strong></p>
                             <div class="form-group w-75">
                                 <div class="input-group">
                                     <div class="input-group-text">
@@ -63,7 +63,7 @@
                         </div>        
 
                             <div class="col-12">
-                                <p class="mt-3"><strong>Number of Adult:</strong></p>
+                                <p class="detail_item"><strong>Number of Adult:</strong></p>
                                 <div class="form-group w-75">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -118,8 +118,8 @@
                                 </div>
                             </div>-->
                             {% if tourprogram.maximum < 999 %}
-                            <div class="col-12">
-                                <p class="note-group">More than {{ tourprogram.maximum }} people, please contact us. (Special offer for a group!)</p>
+                            <div class="col-12 note-group">
+                                <p>More than {{ tourprogram.maximum }} people, please contact us. (Special offer for a group!)</p>
                                 <a href="{% url 'contact' %}">Ask us!</a>
                             </div>
                             {% endif %}
@@ -128,7 +128,7 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Watching</span>
+                                    <span class="text-uppercase">Back to list</span>
                                 </a>
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                             </div>
@@ -139,30 +139,34 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
-                <h6>Region:</h6>
-                <p class="mt-3">{{ tourprogram.region }}</p>
-                <h6>Maximum:</h6>
-                {% if tourprogram.maximum == 999 %}
-                <p class="mt-3">No limit</p>
-                {% else %}
-                <p class="mt-3">{{ tourprogram.maximum }}</p>
-                {% endif %}
-                <h6>Departure Date:</h6>
-                <p class="mt-3">{{ tourprogram.departure_date }}</p>
-                <h6>Estimated Time:</h6>
-                <p class="mt-3">{{ tourprogram.estimated_times }}</p>
-                <h6>Description:</h6>
-                <p class="mt-3">{{ tourprogram.description }}</p>
-                <h6>Included:</h6>
-                <p class="mt-3">{{ tourprogram.included }}</p>
-                <h6>Not included:</h6>
-                <p class="mt-3">{{ tourprogram.not_included }}</p>
-                <h6>Meeting Place:</h6>
-                <p class="mt-3">{{ tourprogram.meeting_place }}</p>
-                <h6>Note:</h6>
-                <p class="mt-3">{{ tourprogram.note }}</p>
+                <div class="row">
+                <div class="col-sm-6 col-md-3 text-center small-info" id="program_region">Region <p><strong>{{ tourprogram.region }}</strong></p></div>
+                <div class="col-sm-6 col-md-3 text-center small-info" id="program_maximum">Maximum<p><strong>
+                    {% if tourprogram.maximum == 999 %}
+                        No limit
+                    {% else %}
+                        {{ tourprogram.maximum }}
+                    {% endif %}</strong></p>
+                </div>
+                <div class="col-sm-6 col-md-3 text-center small-info" id="departure_date">Departure Date<p><strong>{{ tourprogram.departure_date }}</strong></p></div>
+                <div class="col-sm-6 col-md-3 text-center small-info" id="est_time">Estimated Time<p><strong>{{ tourprogram.estimated_times }}</strong></p></div>
+                </div>
+                <div class="detail_item">Description
+                    <p> - {{ tourprogram.description }}</p>
+                </div>
+                <div class="detail_item">Included
+                    <p> - {{ tourprogram.included }}</p>
+                </div>
+                <div class="detail_item">Not included
+                    <p> - {{ tourprogram.not_included }}</p>
+                </div>
+                <div class="detail_item">Meeting Place
+                    <p> - {{ tourprogram.meeting_place }}</p>
+                </div>
+                <div class="detail_item">Note
+                    <p> - {{ tourprogram.note }}</p>
+                </div>
             </div>
-            
         </div>
     </div>
 {% endblock %}
