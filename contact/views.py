@@ -22,7 +22,7 @@ def contact(request):
                 f"From {name}, <{email}>", 
                 f"Contact type: {contact_type}'\n'Tour program: {tourprogram}'\n'Order number: {ordernumber}'\n'Phone: {phone}'\n'message: {message}", 
                 email,
-                [settings.DEFAULT_TO_EMAIL],
+                [settings.DEFAULT_FROM_EMAIL],
                 fail_silently=False
             )
             print(send_mail)
