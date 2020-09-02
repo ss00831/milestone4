@@ -59,14 +59,27 @@
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
+                    <div class="col-7 offset-1">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <p class="my-0">{{ total_adult | floatformat:2 }} SEK</p>
                         <p class="my-0"><strong>{{ grand_total | floatformat:2 }} SEK</strong></p>
-                    </div>
+                    </div>               
+                </div>
+                <div class="mt-4 refund-policy">
+                    <h5><strong>README!</strong></h5>
+                    <br/>
+                    <h6><span><i class="far fa-window-close"></i></span> Penalty policy for cancellation</h6>
+                        <ul>
+                            <li>1 week before: No penalty, and refund fully</li>
+                            <li>5 days before: 15% of the amount paid</li>
+                            <li>3 days before: 30% of the amount paid</li>
+                            <li>1 day before: 50% of the amount paid</li>
+                            <li>Cancel on the day or No-show : 100% (No refund)</li>
+                        </ul>
+                    <h6><span><i class="fas fa-exchange-alt"></i></span> Change of schedule: Please let us know a day before and send message us.</h6>
                 </div>
             </div>
             <div class="col-12 col-lg-6">

@@ -64,3 +64,13 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+.refund-policy{
+    padding: 1rem;
+    background:#ffffc9;
+}
+
+.refund-policy > h6{
+    font-size: 1.0625rem;
+    color: blue;
+}
