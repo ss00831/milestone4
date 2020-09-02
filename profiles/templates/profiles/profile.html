@@ -57,15 +57,12 @@
                                     <td>
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
-                                                
                                                 <li class="small">
-                                                    
                                                     {{ item.tourprogram.name }} x{{ item.number_people_adult }}
                                                 </li>
                                                 <li class="small">
                                                     Departure date {{ item.select_departure_date }}
                                                 </li>
-                                                
                                             {% endfor %}
                                         </ul>
                                     </td>
@@ -77,6 +74,7 @@
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
