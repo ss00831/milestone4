@@ -11,8 +11,7 @@
         form.submit();
     }
 
-
-    // Disable +/- buttons outside 1-15 range
+    // Disable +/- buttons outside 1-maximum range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_ppl_${itemId}`).val());
         var maximum = parseInt($(`#id_ppl_${itemId}`).attr('max'));
@@ -53,47 +52,5 @@
        $(closestInput).val(currentValue - 1);
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
-    });
-
-    // Disable +/- buttons outside 1-15 range
-    function handleEnableDisable_child(itemId) {
-        var currentValue_child = parseInt($(`#id_ppl-child_${itemId}`).val());
-        var minusDisabled_child = currentValue_child < 1;
-        var plusDisabled_child = currentValue_child > 14;
-        $(`#decrement-ppl-child_${itemId}`).prop('disabled', minusDisabled_child);
-        $(`#increment-ppl-child_${itemId}`).prop('disabled', plusDisabled_child);
-    }
-
-    // Ensure proper enabling/disabling of all inputs on page load
-    var allPplChildInputs = $('.ppl-child_input');
-    for(var i = 0; i < allPplChildInputs.length; i++){
-        var itemId = $(allPplChildInputs[i]).data('item_id');
-        handleEnableDisable_child(itemId);
-    }
-
-    // Check enable/disable every time the input is changed
-    $('.ppl-child_input').change(function() {
-        var itemId = $(this).data('item_id');
-        handleEnableDisable_child(itemId);
-    });
-
-    // Increment quantity
-    $('.increment-ppl-child').click(function(e) {
-       e.preventDefault();
-       var closestInput = $(this).closest('.input-group').find('.ppl-child_input')[0];
-       var currentValue_child = parseInt($(closestInput).val());
-       $(closestInput).val(currentValue_child + 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable_child(itemId);
-    });
-
-    // Decrement quantity
-    $('.decrement-ppl-child').click(function(e) {
-       e.preventDefault();
-       var closestInput = $(this).closest('.input-group').find('.ppl-child_input')[0];
-       var currentValue_child = parseInt($(closestInput).val());
-       $(closestInput).val(currentValue_child - 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable_child(itemId);
     });
 </script>

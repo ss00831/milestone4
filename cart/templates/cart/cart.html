@@ -31,9 +31,7 @@
                                     <th scope="col">Tour Info</th>
                                     <th scope="col"></th>
                                     <th scope="col" class="cart-field-name">Price of <br>Adult</th>
-                                    <th scope="col" class="cart-field-name">People of <br>Adult</th>                                    
-                                    <!--<th scope="col" class="cart-field-name">Price of <br>Child</th>
-                                    <th scope="col" class="cart-field-name">People of <br>Child</th>-->
+                                    <th scope="col" class="cart-field-name">People of <br>Adult</th>   
                                     <th scope="col" class="cart-field-name">Subtotal</th>
                                     <th scope="col" class="cart-field-name"></th>
                                 </tr>
@@ -57,74 +55,19 @@
                                             {% csrf_token %}
                                             <div class="form-group w-75">
                                                 <div class="input-group">
-                                                    <!--<div class="input-group-prepend">
-                                                        <button class="decrement-ppl btn btn-sm btn-black rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-ppl_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>-->
                                                     <input type="number" class="form-control form-control-sm ppl_input" pattern="[0-9]*"
                                                         name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="{{ item.tourprogram.maximum }}"
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_ppl_{{ item.item_id }}" required>
-                                                    <!--<div class="input-group-append">
-                                                        <button class="increment-ppl btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-ppl_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>-->
-
                                                     <input type="hidden" name="select_departure_date" value="{{ item.date }}">
-                                                    
                                                 </div>
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        
                                     </td>
-                                    <!--
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.tourprogram.pricechild }} SEK</p>
-                                    </td>
-                                    
-                                    <td class="py-3">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group w-75">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-ppl-child btn btn-sm btn-black rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-ppl-child_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm ppl-child_input" type="number"
-                                                        name="number_people_child" value="{{ item.number_people_child }}" min="0" max="15"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_ppl-child_{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-ppl-child btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-ppl-child_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                    </td>-->
                                     <td class="py-3">
                                         <p class="my-0">{{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }} SEK</p>
                                     </td>
-                                    
                                     <td class="py-3">
                                         <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-select_departure_date="{{ item.date }}"><span class="icon"><i class="fas fa-trash-alt"></i></span></a>
                                     </td>

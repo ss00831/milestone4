@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 
 from tourprograms.models import Tourprogram
@@ -39,8 +41,8 @@ def add_to_cart(request, item_id):
         else:
             cart[item_id] = {'items_by_date': {date: number_people_adult}}
             messages.success(request,
-                                 (f'Added date {date.upper()} '
-                                  f'{tourprogram.name} to your cart'))
+                             (f'Added date {date.upper()} '
+                              f'{tourprogram.name} to your cart'))
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += number_people_adult
@@ -56,7 +58,10 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """Adjust the number of people of the specified tour program to the specified amount"""
+    """
+    Adjust the number of people of the specified tour program
+    to the specified amount
+    """
     tourprogram = get_object_or_404(Tourprogram, pk=item_id)
     number_people_adult = int('0'+request.POST.get('number_people_adult'))
     maximum = tourprogram.maximum
@@ -73,16 +78,20 @@ def adjust_cart(request, item_id):
                               f'{tourprogram.name} people to '
                               f'{cart[item_id]["items_by_date"][date]}'))
         elif number_people_adult == 0:
-            messages.error(request, '0 and null value are not acceptable. If you want to remove this item, please click remove button.')
+            messages.error(request,
+                           ('0 and null value are not acceptable. '
+                            'If you want to remove this item,'
+                            'please click remove button.'))
         elif number_people_adult < 0:
             messages.error(request, 'Wrong.')
-
         else:
-            messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
-            #del cart[item_id]['items_by_date'][date]
+            messages.error(request,
+                           (f'The maximum of this tour is'
+                            f'{tourprogram.maximum}.'))
             if not cart[item_id]['items_by_date']:
-            #    cart.pop(item_id)
-                messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
+                messages.error(request,
+                               (f'The maximum of this tour is'
+                                f'{tourprogram.maximum}.'))
     else:
         if number_people_adult > 0 and number_people_adult <= maximum:
             cart[item_id] = number_people_adult
@@ -90,12 +99,16 @@ def adjust_cart(request, item_id):
                              (f'Updated {tourprogram.name} '
                               f'people to {cart[item_id]}'))
         elif number_people_adult == 0:
-            messages.error(request, '0 and null value are not acceptable. If you want to remove this item, please click remove button.')
-        elif math.isinf(number_people_adult) == False:
+            messages.error(request,
+                           ('0 and null value are not acceptable. '
+                            'If you want to remove this item, '
+                            'please click remove button.'))
+        elif math.isinf(number_people_adult) is False:
             messages.error(request, 'Wrong.')
         else:
             # cart.pop(item_id)
-            messages.error(request, f'The maximum of this tour is {tourprogram.maximum}.')
+            messages.error(request,
+                           (f'The maximum is {tourprogram.maximum}.'))
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -120,11 +133,12 @@ def remove_from_cart(request, item_id):
                               f'{tourprogram.name} from your cart'))
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {tourprogram.name} from your cart')
+            messages.success(request,
+                             (f'Removed {tourprogram.name} from your cart'))
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500) 
+        return HttpResponse(status=500)

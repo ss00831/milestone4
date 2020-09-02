@@ -1,4 +1,3 @@
-from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from tourprograms.models import Tourprogram
@@ -10,7 +9,6 @@ def cart_contents(request):
     total_adult = 0
     tourprogram_count = 0
     cart = request.session.get('cart', {})
-    
     gift_event = settings.GIFT_THRESHOLD
 
     for item_id, item_data in cart.items():
@@ -23,7 +21,7 @@ def cart_contents(request):
                 'number_people_adult': item_data,
                 'tourprogram': tourprogram,
             })
-        else: 
+        else:
             tourprogram = get_object_or_404(Tourprogram, pk=item_id)
             for date, number_people_adult in item_data['items_by_date'].items():
                 total_adult += number_people_adult * tourprogram.priceadult
@@ -37,11 +35,11 @@ def cart_contents(request):
 
     if total_adult < settings.GIFT_THRESHOLD:
         gift_event = settings.GIFT_THRESHOLD - total_adult
-    else:        
+    else:
         gift_event = 0
-    
+
     grand_total = total_adult
-    
+
     context = {
         'cart_items': cart_items,
         'total_adult': total_adult,

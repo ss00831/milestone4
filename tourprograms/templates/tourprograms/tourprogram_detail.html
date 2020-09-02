@@ -14,8 +14,6 @@
     <div class="container-fluid">
         <h3 class="mb-0 page-top">{{ tourprogram.name }}</h3>
         <div class="row">
-        
-                    
             <div class="col-12 col-md-6 col-lg-6 offset-lg-1">
                 <div class="image-container my-5">
                     {% if tourprogram.image %}
@@ -89,34 +87,6 @@
                                     </div>
                                 </div>
                             </div>
-<!--
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Number of Child:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-ppl-child btn btn-black rounded-0" 
-                                                data-item_id="{{ tourprogram.id }}" id="decrement-ppl-child_{{ tourprogram.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control ppl-child_input" type="number"
-                                            name="number_people_child" value="0" min="0" max="15"
-                                            data-item_id="{{ tourprogram.id }}"
-                                            id="id_ppl-child_{{ tourprogram.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-ppl-child btn btn-black rounded-0"
-                                                data-item_id="{{ tourprogram.id }}" id="increment-ppl-child_{{ tourprogram.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
                             {% if tourprogram.maximum < 999 %}
                             <div class="col-12 note-group">
                                 <p>More than {{ tourprogram.maximum }} people, please contact us. (Special offer for a group!)</p>
@@ -134,8 +104,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>
-                    
+                    </form>                    
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-10 offset-lg-1">

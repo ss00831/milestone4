@@ -19,8 +19,10 @@ def contact(request):
             phone = contact_form.cleaned_data['phone']
             message = contact_form.cleaned_data['message']
             send_mail(
-                f"From {name}, <{email}>", 
-                f"Contact type: {contact_type}'\n'Tour program: {tourprogram}'\n'Order number: {ordernumber}'\n'Phone: {phone}'\n'message: {message}", 
+                f"From {name}, <{email}>",
+                f"Contact type: {contact_type}'\n'Tour program: {tourprogram}"
+                f"'\n'Order number: {ordernumber}'\n'Phone:"
+                f"{phone}'\n'message: {message}",
                 email,
                 [settings.DEFAULT_FROM_EMAIL],
                 fail_silently=False

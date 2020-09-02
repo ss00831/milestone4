@@ -7,9 +7,12 @@ from .models import Tourprogram, Category
 
 # Create your views here.
 
+
 def all_tourprograms(request):
-    """ A view to show all tour programs, including sorting and search queries """
-    
+    """
+    A view to show all tour programs, including sorting and search queries
+    """
+
     tourprograms = Tourprogram.objects.all()
     query = None
     categories = None

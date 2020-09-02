@@ -2,7 +2,6 @@ import uuid
 
 from django.db import models
 from django.db.models import Sum
-from django.conf import settings
 
 from django_countries.fields import CountryField
 
@@ -23,7 +22,6 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
-
 
     def _generate_order_number(self):
         """
@@ -58,7 +56,6 @@ class OrderLineItem(models.Model):
     tourprogram = models.ForeignKey(Tourprogram, null=False, blank=False, on_delete=models.CASCADE)
     select_departure_date = models.CharField(max_length=254, null=True, blank=True)
     number_people_adult = models.IntegerField(null=False, blank=False, default=0)
-    #number_people_child = models.IntegerField(null=True, blank=True, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
