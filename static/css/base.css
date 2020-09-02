@@ -207,6 +207,47 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* ------------------------------- footer */
+footer{
+    background: #043540;
+    padding-top: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-item > h6{
+    font-size: 1.25rem;
+    text-transform:capitalize;
+}
+
+.social-links{
+    padding: 0;
+}
+
+.social-links > li {
+    display: inline;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.social-links a{
+    color: #adf7ff;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.contact-info, .visit-info{
+    text-align: left;
+    padding-left: 5rem;
+}
+
+.contact-info > span > i{
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -380,6 +421,14 @@ input[name='q']::placeholder {
     }
 }
 
+
+@media (max-width: 992.02px) {
+    .contact-info, .visit-info{
+        padding-left: 2rem;
+    }
+}
+
+
 @media (max-width: 767.98px) {
     .small-info{
         margin-bottom: 0;
@@ -389,6 +438,10 @@ input[name='q']::placeholder {
     }
     .card > a > img{
         height: 11rem;
+    }
+    .contact-info, .visit-info{
+        padding-left: 0rem;
+        text-align: center;
     }
 }
 @media (max-width: 640.02px) {
