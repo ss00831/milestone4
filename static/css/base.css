@@ -36,6 +36,10 @@ body {
     background: #dce8de;
 }
 
+#home-link{
+    visibility: hidden;
+}
+
 .nav-item > .logo-font{
     text-transform: capitalize;
     font-size:1.125rem;
@@ -404,6 +408,7 @@ footer{
     }
 }
 
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -425,6 +430,11 @@ footer{
 @media (max-width: 992.02px) {
     .contact-info, .visit-info{
         padding-left: 2rem;
+    }
+
+    #home-link{
+        visibility: visible;
+        background:#93dbab
     }
 }
 
