@@ -9,17 +9,17 @@ I want to introduce you to the activities you can do in the area through several
 ## UX
 
 ### Preview
-- Desktop
-
-- Tablet
-
-- Mobile
+![Web-Showcase-Project-Presentation](https://user-images.githubusercontent.com/53374745/92158705-9b517500-ee2c-11ea-9d26-575c4ea2f3d1.png)
 
 ### User Scenario
 
 ![userstories](https://user-images.githubusercontent.com/53374745/91954225-cf7c4700-ed01-11ea-8619-808d1bede4a9.JPG)
 
 ### Wireframes
+
+- Desktop: [ms4-desktop.pdf](https://github.com/ss00831/milestone4/files/5170012/ms4-desktop.pdf)
+- Tablet: [ms4-tablet.pdf](https://github.com/ss00831/milestone4/files/5170011/ms4-tablet.pdf)
+- Mobile: [ms4-mobile.pdf](https://github.com/ss00831/milestone4/files/5170010/ms4-mobile.pdf)
 
 
 ## Features
@@ -140,7 +140,7 @@ I want to introduce you to the activities you can do in the area through several
 - Google font (https://fonts.google.com/)
 - Stripe (https://stripe.com/)
 - Boto3 (https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-
+- Responsive Web Design Showcase Mockup (https://www.mockupworld.co/free/responsive-web-design-showcase-mockup/)
 
 ## Testing
 
@@ -150,11 +150,109 @@ I want to introduce you to the activities you can do in the area through several
 
 ## deployment
 
-### My Milestone4 page address: https://lapland-in-sweden.herokuapp.com/
+#### My Milestone4 page address: https://lapland-in-sweden.herokuapp.com/
 
-### To deploy this page to GitHub Pages from its GitHub repository (https://github.com/ss00831/milestone4) :
+#### GitHub repository (https://github.com/ss00831/milestone4) :
+
+### Heroku deployment
+1. Create "requirements.txt" file
+```
+pip3 freeze > requirements.txt
+```
+2. Create "Procfile" file
+```
+web: gunicorn lapland_in_sweden.wsgi:application
+```
+3. Login heroku
+4. Setting Config Vars : Heroku homepage - Select "lapland-in-sweden" project - Setting - Click "Reveal Config Vars" - Create Config Vars as below and save
+![setting_heroku](https://user-images.githubusercontent.com/53374745/92122129-5fea8280-edfb-11ea-8942-1d732091678c.JPG)
+ 1) AWS_ACCESS_KEYID, AWS_SECRET_ACCESS_KEY: You can get a csv file which includes the key information when you create staticfiles-user. Find the keys and copy and paste on the fields.
+ 2) DATABASE_URL
+ - The value will be created when you create a new Postgres database.
+ 3) EMAIL_HOST_PASS 
+ - You can get the value in app password generator in Gmail. The value is 16 character.
+ 4) EMAIL_HOST_USER
+ - Your gmail address
+ 5) SECRET_KEY 
+ - Go to https://miniwebtool.com/django-secret-key-generator/ and click "Generate Django Secret Key"
+ - The generated Django Secret Key length is 50 character. Use this value.
+ 6) STRIPE_PUBLIC_KEY 
+ - Go to Stripe.com and login -> Dashboard -> Developers -> API Keys -> Copy "Publishable key"
+ 7) STRIPE_SECRET_KEY 
+ - Go to Stripe.com and login -> Dashboard -> Developers -> API Keys -> Copy "Secret key"
+ 8) STRIPE_WH_SECRET 
+ - Go to Stripe.com and login -> Dashboard -> Developers -> Webhook -> Click URL -> Copy "Signing secret"
+
+5. Type commands as below for git add / commit / git push
+```
+git add
+```
+```
+git commit -m "commit message" 
+```
+```
+git push
+```
+6. Type commands as below for git remote 
+```
+git remote add heroku https://git.heroku.com/lapland-in-sweden
+```
+```
+git push -u heroku master
+```
+```
+git remote -v
+```
+
+7. Run the webpage
+- Click "Open app" button on the Heroku dashboard page or write https://lapland-in-sweden.herokuapp.com/ on your web browser.
+
+#### AWS Amazon: Store static files and media files. 
 
 ### How to run this project locally
+
+To clone this project from GitHub :
+1. Click [Code] - [Download ZIP] on the repository page.
+2. Unzip the milestone3-master.zip file.
+3. Open Git Bash on your local IDE.
+4. (Optional) Change the current working directory to the location where you want the cloned directory to be made.
+5. Move to the milestone3-master folder
+6. Install the requirement files as below.
+```
+pip3 install -r requirements.txt
+```
+* If you need, update pip.
+```
+python -m pip install --upgrade pip
+```
+7. Make "env.py" file and write as below in the file.
+```
+import os
+
+os.environ["AWS_ACCESS_KEYID"] = "YOUR VALUE"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "YOUR VALUE"
+os.environ["DATABASE_URL"] = "YOUR VALUE"
+os.environ["EMAIL_HOST_PASS"] = "YOUR VALUE"
+os.environ["EMAIL_HOST_USER"] = "YOUR VALUE"
+os.environ["SECRET_KEY"] = "YOUR VALUE"
+os.environ["STRIPE_PUBLIC_KEY"] = "YOUR VALUE"
+os.environ["STRIPE_SECRET_KEY"] = "YOUR VALUE"
+os.environ["STRIPE_WH_SECRET"] = "YOUR VALUE"
+os.environ["USE_AWS"] = "True"
+```
+8. Add "env.py" in .gitignore file.
+9. Migrate models into database.
+```
+python manage.py migrate
+```
+10. Create a superuser
+```
+python manage.py createsuperuser
+```
+11. Run the server
+```
+python manage.py runserver
+```
 
 ## Credits
 
