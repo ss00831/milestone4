@@ -14,8 +14,8 @@ CONTACT_TYPE = (
 class ContactForm(forms.Form):
     contact_type = forms.ChoiceField(choices=CONTACT_TYPE)
     name = forms.CharField()
-    tourprogram = forms.CharField(required=False)
-    ordernumber = forms.CharField(required=False)
+    tour_program_name = forms.CharField(required=False)
+    order_number = forms.CharField(required=False)
     phone = forms.CharField(required=False)
     email = forms.EmailField()
     message = forms.CharField(widget=forms.Textarea)

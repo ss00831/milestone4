@@ -408,6 +408,21 @@ footer{
     }
 }
 
+@media (max-width: 992.02px) {
+    .contact-info, .visit-info{
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #home-link{
+        visibility: visible;
+        background:#93dbab
+    }
+    .image-container > a > img {
+        height: auto;
+    }
+}
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -426,25 +441,9 @@ footer{
     }
 }
 
-
-@media (max-width: 992.02px) {
-    .contact-info, .visit-info{
-        padding-left: 2rem;
-    }
-
-    #home-link{
-        visibility: visible;
-        background:#93dbab
-    }
-}
-
-
 @media (max-width: 767.98px) {
     .small-info{
         margin-bottom: 0;
-    }
-    .image-container > a > img{
-        height: 11rem;
     }
     .card > a > img{
         height: 11rem;
@@ -464,9 +463,6 @@ footer{
 }
 
 @media (max-width: 575.98px) {
-    .image-container > a > img{
-        height: auto;
-    }
     .card > a > img{
         height: auto;
     }
