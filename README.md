@@ -143,10 +143,43 @@ I want to introduce you to the activities you can do in the area through several
 - Responsive Web Design Showcase Mockup (https://www.mockupworld.co/free/responsive-web-design-showcase-mockup/)
 
 ## Testing
+0. Device / Browser spec
+- For Usability testing
+
+|              |            Device 1            |               Device 2               |     Device 3     |                 Device 4                 |         Device 5        |
+|:------------:|:------------------------------:|:------------------------------------:|:----------------:|:----------------------------------------:|:-----------------------:|
+| Device Model |         Macbook Air 13"        |           Samsung NT900X5W           |   iPhone XS Max  |                iPad Air 2                |    LG V30S (LG-H930)    |
+|      OS      |     macOS Catalina 10.15.6     |      Windows 10 Home 10.0.19041      |    iOS 13.6.1    |                iOS 13.6.1                |        Android 9        |
+|      CPU     | Intel core i5 1.6GHz Dual-Core | Intel core i5-7200 2.50GHz Dual core | Apple A12 Bionic | 1.5GHz tri-core 64-bit ARMv8-A "Typhoon" | Qualcomm Snapdragon 835 |
+|      RAM     |               4GB              |                  8GB                 |        4GB       |                    2GB                   |           6GB           |
+|    Graphic   |     Intel HD Graphics 6000     |         Intel HD Graphics 620        |    APPLE G11P    |              PowerVR GXA6850             |   Qualcomm Adreno 540   |
+|    Browser   |   Safari 13.1.2 (15609.3.5.1.3)|          Chrome 85.0.4183.83         |      Safari      |                  Safari                  |   Chrome 85.0.4183.81   |
+
+
+### Code validation
+- html (https://validator.w3.org/): Will check
+- CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input)
+    - base.css : No error
+    - checkout.css : No error
+    - profile.css : No error
+- JS (https://jshint.com/) 
+    - stripe_elements.js: 3 warnings
+    - countryfield.js: 2 warnings
+    - people_input_script.html: 5 warnings
+- Python (http://pep8online.com/): Will check
 
 ### Manual Testing
+1. Usability Test
+- All functional test cases (52 items): All pass
+
+2. The detailed result : Please refer the test sheet as below.
+
+[rev01_testcases_20200904.xlsx](https://github.com/ss00831/milestone4/files/5175245/rev01_testcases_20200904.xlsx)
+
+3. Bugs: None
 
 ### Testing history
+1. 09/04/2020 : Created the test cases for functional, responsive & browser testing and Functional Test
 
 ## deployment
 
@@ -296,3 +329,5 @@ python manage.py runserver
 4. Sending email : https://docs.djangoproject.com/en/3.1/topics/email/
 5. ChoiceField – Django Forms : https://www.geeksforgeeks.org/choicefield-django-forms/
 6. Django form always shows error “This field is required”: https://stackoverflow.com/questions/5806059/django-form-always-shows-error-this-field-is-required
+7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+ 

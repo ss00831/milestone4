@@ -90,7 +90,7 @@ def adjust_cart(request, item_id):
                             f'{tourprogram.maximum}.'))
             if not cart[item_id]['items_by_date']:
                 messages.error(request,
-                               (f'The maximum of this tour is'
+                               (f'The maximum of this tour is '
                                 f'{tourprogram.maximum}.'))
     else:
         if number_people_adult > 0 and number_people_adult <= maximum:
