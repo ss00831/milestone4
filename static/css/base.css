@@ -32,7 +32,6 @@ body {
     width: 1.5rem;
 }
 
-
 .list-inline-item:not(:last-child) {
     margin-right: 0;
 }
@@ -419,7 +418,6 @@ footer{
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
         padding-top: 164px;
     }
@@ -470,6 +468,7 @@ footer{
         text-align: center;
     }
 }
+
 @media (max-width: 640.02px) {
     .cart_list{
         font-size: 0.75rem;
@@ -484,6 +483,7 @@ footer{
         height: auto;
     }
 }
+
 @media (max-width: 350.02px) {
     .navbar > .list-inline-item > a{
         font-size: 0.8125rem;
