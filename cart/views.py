@@ -63,7 +63,7 @@ def adjust_cart(request, item_id):
     to the specified amount
     """
     tourprogram = get_object_or_404(Tourprogram, pk=item_id)
-    number_people_adult = int('0'+request.POST.get('number_people_adult'))
+    number_people_adult = int(request.POST.get('number_people_adult'))
     maximum = tourprogram.maximum
     date = None
     if 'select_departure_date' in request.POST:
@@ -79,19 +79,19 @@ def adjust_cart(request, item_id):
                               f'{cart[item_id]["items_by_date"][date]}'))
         elif number_people_adult == 0:
             messages.error(request,
-                           ('0 and null value are not acceptable. '
-                            'If you want to remove this item,'
-                            'please click remove button.'))
-        elif number_people_adult < 0:
-            messages.error(request, 'Wrong.')
-        else:
+                           ('0/null value and texts are not acceptable. '
+                            'If you want to remove this item, '
+                            'please click the trash can icon.'))
+        elif number_people_adult > tourprogram.maximum:
             messages.error(request,
-                           (f'The maximum of this tour is'
+                           (f'The maximum of this tour is '
                             f'{tourprogram.maximum}.'))
             if not cart[item_id]['items_by_date']:
                 messages.error(request,
                                (f'The maximum of this tour is '
-                                f'{tourprogram.maximum}.'))
+                                f'{tourprogram.maximum}.'))        
+        else:
+            messages.error(request, 'Wrong 2.')
     else:
         if number_people_adult > 0 and number_people_adult <= maximum:
             cart[item_id] = number_people_adult
@@ -100,15 +100,13 @@ def adjust_cart(request, item_id):
                               f'people to {cart[item_id]}'))
         elif number_people_adult == 0:
             messages.error(request,
-                           ('0 and null value are not acceptable. '
-                            'If you want to remove this item, '
-                            'please click remove button.'))
-        elif math.isinf(number_people_adult) is False:
-            messages.error(request, 'Wrong.')
+                           ('0/null value and texts are not acceptable. '
+                            'If you want to remove this item,'
+                            'please click the trash can icon.'))
         else:
-            # cart.pop(item_id)
             messages.error(request,
-                           (f'The maximum is {tourprogram.maximum}.'))
+                           (f'The maximum of this tour is '
+                            f'{tourprogram.maximum}.'))
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))

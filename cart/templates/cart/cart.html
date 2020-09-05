@@ -30,8 +30,8 @@
                                 <tr>
                                     <th scope="col">Tour Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col" class="cart-field-name">Price of <br>Adult</th>
-                                    <th scope="col" class="cart-field-name">People of <br>Adult</th>   
+                                    <th scope="col" class="cart-field-name">Price of Adult</th>
+                                    <th scope="col" class="cart-field-name">Number of Adult</th>   
                                     <th scope="col" class="cart-field-name">Subtotal</th>
                                     <th scope="col" class="cart-field-name"></th>
                                 </tr>
@@ -55,15 +55,17 @@
                                             {% csrf_token %}
                                             <div class="form-group w-75">
                                                 <div class="input-group">
-                                                    <input type="number" class="form-control form-control-sm ppl_input" pattern="[0-9]*"
-                                                        name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="{{ item.tourprogram.maximum }}"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_ppl_{{ item.item_id }}" required>
+                                                    <input class="form-control form-control-sm ppl_input" type="number" 
+                                                        name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="{{ item.tourprogram.maximum }}" 
+                                                        data-item_id="{{ item.item_id }}" id="id_ppl_{{ item.item_id }}" required>
+                                                </div>
+                                                <div>
                                                     <input type="hidden" name="select_departure_date" value="{{ item.date }}">
                                                 </div>
                                             </div>
+                                            <input type="submit" class="btn btn-outline-info btn-sm border-0" value="Update">
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
+                                        
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }} SEK</p>
@@ -75,7 +77,6 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Cart Total: {{ total_adult|floatformat:2 }} SEK</strong></h6>
                                     <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }} SEK</strong></h4>
                                     
                                     {% if gift_event > 0 %}
@@ -160,5 +161,4 @@
          });
     })
 </script>
-{% include 'tourprograms/includes/people_input_script.html' %}
 {% endblock %}
