@@ -170,16 +170,19 @@ I want to introduce you to the activities you can do in the area through several
 
 ### Manual Testing
 1. Usability Test
-- All functional test cases (52 items): All pass
+- All functional test cases (57 items): All pass
+- All input data cases (53 items): All pass
+- All authenticated status test cases (9 items): All pass
 
 2. The detailed result : Please refer the test sheet as below.
 
-[rev01_testcases_20200904.xlsx](https://github.com/ss00831/milestone4/files/5175245/rev01_testcases_20200904.xlsx)
+[rev02_testcases_20200905.xlsx](https://github.com/ss00831/milestone4/files/5178525/rev02_testcases_20200905.xlsx)
 
 3. Bugs: None
 
 ### Testing history
 1. 09/04/2020 : Created the test cases for functional, responsive & browser testing and Functional Test
+1. 09/05/2020 : Usability Testing
 
 ## deployment
 

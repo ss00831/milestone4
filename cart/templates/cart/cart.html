@@ -3,162 +3,164 @@
 {% load cart_tools %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-md mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font page-top mb-4">Your cart</h2>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                {% if cart_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Tour Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col" class="cart-field-name">Price of Adult</th>
-                                    <th scope="col" class="cart-field-name">Number of Adult</th>   
-                                    <th scope="col" class="cart-field-name">Subtotal</th>
-                                    <th scope="col" class="cart-field-name"></th>
-                                </tr>
-                            </thead>
-
-                            {% for item in cart_items %}
-                                <tr class="cart_list">
-                                    <td class="py-3 w-25">
-                                        <img class="img-fluid rounded cart-img" src="{{ item.tourprogram.image_url }}">
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0"><strong>{{ item.tourprogram.name }}</strong></p>
-                                        <p class="my-0"><strong>Date: </strong>{{ item.date }}</p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.tourprogram.sku|upper }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.tourprogram.priceadult }} SEK</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group w-75">
-                                                <div class="input-group">
-                                                    <input class="form-control form-control-sm ppl_input" type="number" 
-                                                        name="number_people_adult" value="{{ item.number_people_adult }}" min="1" max="{{ item.tourprogram.maximum }}" 
-                                                        data-item_id="{{ item.item_id }}" id="id_ppl_{{ item.item_id }}" required>
-                                                </div>
-                                                <div>
-                                                    <input type="hidden" name="select_departure_date" value="{{ item.date }}">
-                                                </div>
-                                            </div>
-                                            <input type="submit" class="btn btn-outline-info btn-sm border-0" value="Update">
-                                        </form>
-                                        
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }} SEK</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-select_departure_date="{{ item.date }}"><span class="icon"><i class="fas fa-trash-alt"></i></span></a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }} SEK</strong></h4>
-                                    
-                                    {% if gift_event > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get an event gift by spending just <strong>{{ gift_event }} SEK</strong> more!
-                                        </p>
-                                    {% endif %}
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'tourprograms' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">See other tours</span>
-                                    </a>
-                                    {% if user.is_authenticated %}
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'account_login' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Login</span>
-                                        <span class="icon">
-                                            <i class="fas fa-sign-in-alt"></i>
-                                        </span>
-                                    </a>
-                                    <a href="{% url 'account_signup' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Register</span>
-                                        <span class="icon">
-                                            <i class="fas fa-user-plus"></i>
-                                        </span>
-                                    </a>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your cart is empty.</p>
-                    <a href="{% url 'tourprograms' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">See other tours</span>
-                    </a>
-                {% endif %}
-            </div>
+<div class="overlay"></div>
+<div class="container-md mb-2">
+    <div class="row">
+        <div class="col">
+            <hr />
+            <h2 class="logo-font page-top mb-4">Your cart</h2>
+            <hr />
         </div>
     </div>
 
-    {% endblock %}
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Tour Info</th>
+                            <th scope="col"></th>
+                            <th scope="col" class="cart-field-name">Price of Adult</th>
+                            <th scope="col" class="cart-field-name">Number of Adult</th>
+                            <th scope="col" class="cart-field-name">Subtotal</th>
+                            <th scope="col" class="cart-field-name"></th>
+                        </tr>
+                    </thead>
 
+                    {% for item in cart_items %}
+                    <tr class="cart_list">
+                        <td class="py-3 w-25">
+                            <img class="img-fluid rounded cart-img" src="{{ item.tourprogram.image_url }}" />
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0"><strong>{{ item.tourprogram.name }}</strong></p>
+                            <p class="my-0"><strong>Date: </strong>{{ item.date }}</p>
+                            <p class="my-0 small text-muted">SKU: {{ item.tourprogram.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">{{ item.tourprogram.priceadult }} SEK</p>
+                        </td>
+                        <td class="py-3">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                {% csrf_token %}
+                                <div class="form-group w-75">
+                                    <div class="input-group">
+                                        <input
+                                            class="form-control form-control-sm ppl_input"
+                                            type="number"
+                                            name="number_people_adult"
+                                            value="{{ item.number_people_adult }}"
+                                            min="1"
+                                            max="{{ item.tourprogram.maximum }}"
+                                            data-item_id="{{ item.item_id }}"
+                                            id="id_ppl_{{ item.item_id }}"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <input type="hidden" name="select_departure_date" value="{{ item.date }}" />
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-outline-info btn-sm border-0" value="Update" />
+                            </form>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">{{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }} SEK</p>
+                        </td>
+                        <td class="py-3">
+                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-select_departure_date="{{ item.date }}">
+                                <span class="icon"><i class="fas fa-trash-alt"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }} SEK</strong></h4>
+                            {% if gift_event > 0 %}
+                            <p class="mb-1 text-danger">You could get an event gift by spending just <strong>{{ gift_event }} SEK</strong> more!</p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'tourprograms' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">See other tours</span>
+                            </a>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                            {% else %}
+                            <a href="{% url 'account_login' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Login</span>
+                                <span class="icon">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                            </a>
+                            <a href="{% url 'account_signup' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Register</span>
+                                <span class="icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </span>
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your cart is empty.</p>
+            <a href="{% url 'tourprograms' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">See other tours</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
+    $(".btt-link").click(function (e) {
+        window.scrollTo(0, 0);
+    });
     // Update quantity on click
-    $('.update-link').click(function(e) {      
-        var form = $(this).prev('.update-form');
+    $(".update-link").click(function (e) {
+        var form = $(this).prev(".update-form");
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $(".remove-item").click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var date = $(this).data('select_departure_date');
+        var itemId = $(this).attr("id").split("remove_")[1];
+        var date = $(this).data("select_departure_date");
         var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'select_departure_date': date};
+        var data = { csrfmiddlewaretoken: csrfToken, select_departure_date: date };
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+        $.post(url, data).done(function () {
+            location.reload();
+        });
+    });
 </script>
 {% endblock %}
