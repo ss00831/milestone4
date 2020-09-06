@@ -89,7 +89,7 @@
                                 <div><i class="fas fa-shopping-cart"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        {{ grand_total|floatformat:2 }} SEK
+                                        {{ grand_total|floatformat:0 }} SEK
                                     {% else %}
                                         0.00 SEK
                                     {% endif %}
@@ -140,62 +140,7 @@
     {% block content %}
     {% endblock %}
     </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4 text-center footer-item">
-                    <h6>Social Media</h6>
-                    <ul class="social-links">
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/ss831">
-                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.linkedin.com/in/songhei-lee-a7ba04139/">
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <span class="sr-only">Linkedin</span>
-                            </a>
-                        </li>
-                        <br />
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/ss831_/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.youtube.com/results?search_query=sweden+lapland">
-                                <i class="fab fa-youtube-square" aria-hidden="true"></i>
-                                <span class="sr-only">Youtube</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-4 footer-item">
-                    <h6>contact information</h6>
-                    <div class="contact-info">
-                        <p>
-                            <span><i class="fas fa-phone-alt"></i></span> +46 980 765 43<br />
-                            <span><i class="fas fa-mobile-alt"></i></span> +46 70 396 0000<br />
-                            <span><i class="far fa-envelope"></i></span> ss831x@gmail.com
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 footer-item">
-                    <h6>Visit Address</h6>
-                    <div class="visit-info">
-                        <p>
-                            xxxxxxxgatan 17<br />
-                            Kiruna 981 34<br />
-                            Norrbottens Län, Sweden
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'includes/footer.html' %}
     </div>
     {% block postloadjs %}
     <script type="text/javascript">
