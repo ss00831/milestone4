@@ -5,8 +5,6 @@ from django.contrib import messages
 
 from tourprograms.models import Tourprogram
 
-import math
-
 
 def view_cart(request):
     """ A view that renders the cart contents page """
@@ -89,7 +87,7 @@ def adjust_cart(request, item_id):
             if not cart[item_id]['items_by_date']:
                 messages.error(request,
                                (f'The maximum of this tour is '
-                                f'{tourprogram.maximum}.'))        
+                                f'{tourprogram.maximum}.'))
         else:
             messages.error(request, 'Wrong 2.')
     else:

@@ -166,7 +166,11 @@ I want to introduce you to the activities you can do in the area through several
     - stripe_elements.js: 3 warnings
     - countryfield.js: 2 warnings
     - people_input_script.html: 5 warnings
-- Python (http://pep8online.com/): Will check
+- Python (python3 -m flake)
+    - Common Errors
+        1. E501 line too long
+        1. 'xxxxxx' imported but unused
+        1. DJ01 Avoid using null=True on string-based fields such CharField.
 
 ### Manual Testing
 1. Usability Test
