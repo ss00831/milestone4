@@ -157,7 +157,7 @@ I want to introduce you to the activities you can do in the area through several
 
 
 ### Code validation
-- html (https://validator.w3.org/): Will check
+- html (https://validator.w3.org/): No error, mainly javascript warnings
 - CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input)
     - base.css : No error
     - checkout.css : No error
@@ -179,7 +179,7 @@ I want to introduce you to the activities you can do in the area through several
 [rev03_testcases_20200906.xlsx](https://github.com/ss00831/milestone4/files/5179696/rev03_testcases_20200906.xlsx)
 
 3. Bugs
-- < 992 px : Admin mode menu - move to Move to Sign out (accounts/logout/) page
+- < 992 px : Admin mode menu - move to Move to Sign out (accounts/logout/) page (Fixed 09/06/2020)
 
 ### Testing history
 1. 09/04/2020: Created the test cases for functional, responsive & browser testing and Functional Test
