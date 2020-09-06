@@ -467,6 +467,14 @@ footer{
         padding-left: 0rem;
         text-align: center;
     }
+    #content-wrap {
+        padding-bottom: 5rem;
+    }
+    footer{
+        position: relative;
+        height: auto;
+    }
+    
 }
 
 @media (max-width: 640.02px) {
