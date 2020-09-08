@@ -171,8 +171,9 @@ I want to introduce you to the activities you can do in the area through several
     - Common Errors
         1. DJ01 Avoid using null=True on string-based fields such CharField
         1. F401 'xxxxxx' imported but unused
-        1. F841 local variable 'e' is assigned to but never used (webhook.py)
-    2. http://pep8online.com/: No error
+        1. F841 local variable 'e' is assigned to but never used: checkout\webhook.py
+        1. E501 line too long (92 > 79 characters): checkout\views.py
+    2. http://pep8online.com/: 1 error - checkout\views.py
 
 ### Manual Testing
 1. Usability Test

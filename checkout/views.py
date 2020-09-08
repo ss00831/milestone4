@@ -66,8 +66,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for date, number_people_adult in item_data[' \
-                        items_by_date'].items():
+                        for date, number_people_adult in item_data['items_by_date'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 tourprogram=tourprogram,
