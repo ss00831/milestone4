@@ -3,6 +3,7 @@ from .models import Tourprogram, Category
 
 # Register your models here.
 
+
 class TourprogramAdmin(admin.ModelAdmin):
     list_display = (
         'category',
@@ -20,11 +21,13 @@ class TourprogramAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Tourprogram, TourprogramAdmin)
 admin.site.register(Category, CategoryAdmin)

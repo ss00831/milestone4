@@ -23,7 +23,8 @@ def cart_contents(request):
             })
         else:
             tourprogram = get_object_or_404(Tourprogram, pk=item_id)
-            for date, number_people_adult in item_data['items_by_date'].items():
+            for date, number_people_adult in \
+                    item_data['items_by_date'].items():
                 total_adult += number_people_adult * tourprogram.priceadult
                 tourprogram_count += number_people_adult
                 cart_items.append({
