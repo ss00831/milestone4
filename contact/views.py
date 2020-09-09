@@ -20,7 +20,8 @@ def contact(request):
             message = contact_form.cleaned_data['message']
             send_mail(
                 f"From {name}, <{email}>",
-                f"Contact type: {contact_type}'\n'Tour program: {tour_program_name}"
+                f"Contact type: {contact_type}'\n'"
+                f"Tour program: {tour_program_name}"
                 f"'\n'Order number: {order_number}'\n'Phone:"
                 f"{phone}'\n'message: {message}",
                 email,
