@@ -184,6 +184,7 @@ I want to introduce you to the activities you can do in the area through several
 
 3. Bugs
 - < 992 px : Admin mode menu - move to Move to Sign out (accounts/logout/) page (Fixed 09/06/2020)
+- checkout.html - Save this booking information to my profile checkbox: The input data is always saved even if the user has unchecked the checkbox.
 
 ### Testing history
 1. 09/04/2020: Created the test cases for functional, responsive & browser testing and Functional Test
