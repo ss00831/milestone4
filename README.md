@@ -177,22 +177,25 @@ I want to introduce you to the activities you can do in the area through several
 
 ### Manual Testing
 1. Usability Test
-- All functional test cases (57 items): All pass
+- All functional test cases (87 items)
+    - Added 30 cases about allauth
 - All input data cases (53 items) + card number test (36 cases): All pass
 - All authenticated status test cases (9 items): All pass
 
 2. The detailed result : Please refer the test sheet as below.
 
-[rev03_testcases_20200906.xlsx](https://github.com/ss00831/milestone4/files/5179696/rev03_testcases_20200906.xlsx)
+[rev04_testcases_20200912.xlsx](https://github.com/ss00831/milestone4/files/5212567/rev04_testcases_20200912.xlsx)
+
 
 3. Bugs
 - < 992 px : Admin mode menu - move to Move to Sign out (accounts/logout/) page (Fixed 09/06/2020)
-- checkout.html - Save this booking information to my profile checkbox: The input data is always saved even if the user has unchecked the checkbox.
+- checkout.html - Save this booking information to my profile checkbox: The input data is always saved even if the user has unchecked the checkbox. (Fixed 09/11/2020)
 
 ### Testing history
 1. 09/04/2020: Created the test cases for functional, responsive & browser testing and Functional Test
 1. 09/05/2020: Usability Test
 1. 09/06/2020: Card number test - 36 cases
+1. 09/12/2020: Bug testing
 
 
 ## deployment
