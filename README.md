@@ -177,25 +177,27 @@ I want to introduce you to the activities you can do in the area through several
 
 ### Manual Testing
 1. Usability Test
-- All functional test cases (87 items)
-    - Added 30 cases about allauth
+- All functional test cases (91 items)
+    - Added 4 cases 
 - All input data cases (53 items) + card number test (36 cases): All pass
 - All authenticated status test cases (9 items): All pass
 
 2. The detailed result : Please refer the test sheet as below.
 
-[rev04_testcases_20200912.xlsx](https://github.com/ss00831/milestone4/files/5212567/rev04_testcases_20200912.xlsx)
+[rev05_testcases_20200913.xlsx](https://github.com/ss00831/milestone4/files/5215023/rev05_testcases_20200913.xlsx)
 
 
 3. Bugs
-- < 992 px : Admin mode menu - move to Move to Sign out (accounts/logout/) page (Fixed 09/06/2020)
-- checkout.html - Save this booking information to my profile checkbox: The input data is always saved even if the user has unchecked the checkbox. (Fixed 09/11/2020)
+- Internet Explorer 11
+    - Not able to select a date in tourprogram_detail.html
+    - Not able to input card number and if I don't input any card number and just click complete order, the order is successed.
 
 ### Testing history
 1. 09/04/2020: Created the test cases for functional, responsive & browser testing and Functional Test
 1. 09/05/2020: Usability Test
 1. 09/06/2020: Card number test - 36 cases
 1. 09/12/2020: Bug testing
+1. 09/13/2020: Full testing
 
 
 ## deployment
