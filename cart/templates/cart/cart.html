@@ -78,8 +78,9 @@
                             <p class="my-0">{{ item.tourprogram.priceadult | calc_subtotal:item.number_people_adult }} SEK</p>
                         </td>
                         <td class="py-3">
-                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-select_departure_date="{{ item.date }}">
+                            <a class="remove-item text-danger tooltip-delete" id="remove_{{ item.item_id }}" data-select_departure_date="{{ item.date }}">
                                 <span class="icon"><i class="fas fa-trash-alt"></i></span>
+                                <span class="tooltiptext-delete">Delete</span>
                             </a>
                         </td>
                     </tr>

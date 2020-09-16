@@ -71,6 +71,45 @@ body {
     color: #060057;
 }
 
+.tooltip-delete {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-delete .tooltiptext-delete {
+  visibility: hidden;
+  width: 3rem;
+  font-size: 0.75rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-delete .tooltiptext-delete::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-delete:hover .tooltiptext-delete {
+  visibility: visible;
+  opacity: 1;
+}
+
 .see-our-tour-button {
     margin-top: 4rem;
     background: #00075c;
@@ -501,6 +540,11 @@ footer{
 @media (max-width: 575.98px) {
     .card > a > img{
         height: auto;
+    }
+    .tooltip-delete .tooltiptext-delete {
+        width: 2rem;
+        font-size: 0.5rem;
+        margin-left: -1rem;
     }
 }
 
