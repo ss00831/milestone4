@@ -173,7 +173,8 @@ I want to introduce you to the activities you can do in the area through several
         1. F401 'xxxxxx' imported but unused
         1. F841 local variable 'e' is assigned to but never used: checkout\webhook.py
         1. E501 line too long (92 > 79 characters): checkout\views.py
-    2. http://pep8online.com/: 1 error - checkout\views.py
+        1. E501 line too long (87 > 79 characters): lapland_in_sweden/settings.py
+    2. http://pep8online.com/: 1 error - checkout\views.py, 1 error - lapland_in_sweden/settings.py
 
 ### Manual Testing
 1. Usability Test
@@ -184,13 +185,14 @@ I want to introduce you to the activities you can do in the area through several
 
 2. The detailed result : Please refer the test sheet as below.
 
-[rev05_testcases_20200913.xlsx](https://github.com/ss00831/milestone4/files/5215023/rev05_testcases_20200913.xlsx)
+[rev06_testcases_20200918.xlsx](https://github.com/ss00831/milestone4/files/5251302/rev06_testcases_20200918.xlsx)
 
 
 3. Bugs
 - Internet Explorer 11
     - Not able to select a date in tourprogram_detail.html
     - Not able to input card number and if I don't input any card number and just click complete order, the order is successed.
+  +) Added notice about IE 11: We don't support IE fully. (09/18/2020 - fixed)
 
 ### Testing history
 1. 09/04/2020: Created the test cases for functional, responsive & browser testing and Functional Test
@@ -198,6 +200,7 @@ I want to introduce you to the activities you can do in the area through several
 1. 09/06/2020: Card number test - 36 cases
 1. 09/12/2020: Bug testing
 1. 09/13/2020: Full testing
+1. 09/18/2020: Bug testing
 
 
 ## deployment
@@ -349,4 +352,4 @@ python manage.py runserver
 5. ChoiceField – Django Forms : https://www.geeksforgeeks.org/choicefield-django-forms/
 6. Django form always shows error “This field is required”: https://stackoverflow.com/questions/5806059/django-form-always-shows-error-this-field-is-required
 7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
- 
+8. Check if browser is Internet Explorer: https://jsfiddle.net/alvaroAV/svvz7tkn/ 

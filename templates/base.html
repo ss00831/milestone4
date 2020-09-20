@@ -146,7 +146,9 @@
     <script type="text/javascript">
         $('.toast').toast('show');
 
-        /* Sample function that returns boolean in case the browser is Internet Explorer*/
+        /* Sample function that returns boolean in case the browser is Internet Explorer
+           Source: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
+        */
         function isIE() {
             ua = navigator.userAgent;
             /* MSIE used to detect old browsers and Trident used to newer ones*/
@@ -156,7 +158,7 @@
         }
         /* Create an alert to show if the browser is IE or not */
         if (isIE()) {
-            alert('Hi! You use Internet Explorer. We don\'t recommend Internet Explorer.');
+            alert('Hi! You use Internet Explorer. We don\'t support Internet Explorer fully, we recommend other browsers.');
         }
     </script>
     {% endblock %}
