@@ -133,7 +133,6 @@
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
-
             var selectedVal = selector.val();
             if(selectedVal != "reset"){
                 var sort = selectedVal.split("_")[0];

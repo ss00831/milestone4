@@ -9,6 +9,16 @@ body {
     font-family: 'Lato';
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;
@@ -23,7 +33,48 @@ body {
     margin: 3.5rem 0 0 1.25rem;
 }
 
-/* from Bulma */
+.form-group {
+    margin-bottom: .5rem;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* --------------- from Bulma ---------- */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -36,6 +87,7 @@ body {
     margin-right: 0;
 }
 
+/* --------------- navbar ---------- */
 #topnav, .navbar{
     background: #bee6c2;
 }
@@ -46,6 +98,10 @@ body {
 
 #home-link{
     visibility: hidden;
+}
+
+#contact-link{
+    background:#ebaecf
 }
 
 .nav-item > .logo-font{
@@ -67,99 +123,9 @@ body {
     padding-left: 0;
 }
 
+/* --------------- cart app ---------- */
 .cart-info{
     color: #060057;
-}
-
-.tooltip-delete {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip-delete .tooltiptext-delete {
-  visibility: hidden;
-  width: 3rem;
-  font-size: 0.75rem;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip-delete .tooltiptext-delete::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip-delete:hover .tooltiptext-delete {
-  visibility: visible;
-  opacity: 1;
-}
-
-.see-our-tour-button {
-    margin-top: 4rem;
-    background: #00075c;
-    color: white;
-    min-width: 260px;
-}
-
-.small-info{
-    background:#92d6f7;
-    padding: 0.625rem 0;
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    margin-bottom: .5rem;
-}
-
-.detail_item{
-    margin-bottom: .25rem;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.card > a > img{
-    height: 12rem;
-}
-
-.image-container > a > img{
-    height: 26rem;
 }
 
 .cart-img{
@@ -170,54 +136,62 @@ body {
     font-size: 2rem;
 }
 
-.order-lg-last > a > img{
-    height: 5.15rem;
+.tooltip-delete {
+    position: relative;
+    display: inline-block;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
-.cart-field-name{
+.tooltip-delete .tooltiptext-delete {
+    visibility: hidden;
+    width: 3rem;
     font-size: 0.75rem;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.gift-notice {
-    background:#045e19;
+.tooltip-delete .tooltiptext-delete::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
-#contact-link{
-    background:#ebaecf
+.tooltip-delete:hover .tooltiptext-delete {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --------------- home app - index.html ---------- */
+.see-our-tour-button {
+    margin-top: 4rem;
+    background: #00075c;
+    color: white;
+    min-width: 260px;
+}
+
+/* --------------- tourprograms app - tourprogram_detail.html ---------- */
+.small-info{
+    background:#92d6f7;
+    padding: 0.625rem 0;
+    margin-bottom: 1rem;
 }
 
 .detail_item{
-    font-weight: 600;
-    font-size: 1.125rem;
-}
-
-.detail_item > p{
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
+    margin-bottom: .25rem;
 }
 
 .adult-price{
@@ -226,8 +200,7 @@ body {
 
 .child-event-old{
     text-decoration:line-through;
-    font-size: 0.875rem;
-    
+    font-size: 0.875rem;    
 }
 
 .child-event{
@@ -253,6 +226,43 @@ body {
     color: #7429ff;
 }
 
+.detail_item{
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.detail_item > p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* --------------- tourprograms app - tourprograms.html ---------- */
+.card > a > img{
+    height: 12rem;
+}
+
+.image-container > a > img{
+    height: 26rem;
+}
+
+.order-lg-last > a > img{
+    height: 5.15rem;
+}
+
+.cart-field-name{
+    font-size: 0.75rem;
+}
+
+/* --------------- templates - base.html ---------- */
+.gift-notice {
+    background:#045e19;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* --------------- checkout app ---------- */
 .cashfree-note{
     color: red;
     font-size: 0.8125rem;
@@ -260,12 +270,9 @@ body {
     margin-left: 0.5rem;
 }
 
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
+/* --------------- contact app ---------- */
 .message-box{
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
 
 .grand-total{
@@ -273,7 +280,8 @@ input[name='q']::placeholder {
     font-size: 0.9375rem;
     color: red; 
 }
-/* ------------------------------- footer */
+
+/* --------------- footer ---------- */
 footer{
     position: absolute;
     bottom: 0;
@@ -320,7 +328,6 @@ footer{
 }
 
 /* ------------------------------- bootstrap toasts */
-
 .message-container {
     position: fixed;
     top: 72px;
@@ -387,18 +394,7 @@ footer{
     overflow-y: auto;
 }
 
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
 /* Allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -451,6 +447,14 @@ footer{
 	color: #17a2b8; /* text-info */
 }
 
+/* --------------- Media Queries ---------- */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
 @media (max-width: 1080px) {
     .image-container > a > img{
         height: 18rem;
@@ -495,7 +499,6 @@ footer{
     .header-container {
         padding-top: 116px;
     }
-
     body {
         height: calc(100vh - 116px);
     }
