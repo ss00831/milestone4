@@ -448,6 +448,64 @@ footer{
 }
 
 /* --------------- Media Queries ---------- */
+@media screen and (min-width: 3500.02px) {
+    /* ---- card images : tourprograms.html (/tourprograms) ---- */
+    .card > a > img{
+        height: 24rem;
+    }
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 48rem;
+    }
+}
+
+@media screen and (min-width: 3000.02px) and (max-width: 3500.01px) {
+    /* ---- card images : tourprograms.html (/tourprograms) ---- */
+    .card > a > img{
+        height: 21rem;
+    }
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 44rem;
+    }
+}
+
+@media screen and (min-width: 2500.02px) and (max-width: 3000.01px) {
+    /* ---- card images : tourprograms.html (/tourprograms) ---- */
+    .card > a > img{
+        height: 18rem;
+    }
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 40rem;
+    }
+}
+
+@media screen and (min-width: 2200.02px) and (max-width: 2500.01px) {
+    /* ---- card images : tourprograms.html (/tourprograms) ---- */
+    .card > a > img{
+        height: 16rem;
+    }
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 36rem;
+    }
+}
+
+@media screen and (min-width: 2000.02px) and (max-width: 2200.01px) {
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 34rem;
+    }
+}
+
+@media screen and (min-width: 1500.02px) and (max-width: 2000.01px) {
+    /* ---- image : tourprogram_detail.html (/tourprogram_detail/<tour_id>) ---- */
+    .image-container > a > img{
+        height: 30rem;
+    }
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
