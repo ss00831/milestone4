@@ -254,10 +254,13 @@ body {
 }
 
 /* --------------- templates - base.html ---------- */
+.ie-warning-banner{
+    display: none;
+}
+
 .browser-notice {
     background:yellow;
     padding-left: 2rem;
-    display: none;
 }
 
 .gift-notice {
