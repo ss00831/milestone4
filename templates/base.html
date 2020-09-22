@@ -163,6 +163,7 @@
             }
             /* Create an alert to show if the browser is IE or not */
             if (isIE()) {
+                document.getElementById("ie-warning-banner").style.display = "block";
                 alert('Hi! You use Internet Explorer. We don\'t support Internet Explorer fully, we recommend other browsers.');
             }
         </script>
