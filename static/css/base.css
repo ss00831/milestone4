@@ -254,7 +254,7 @@ body {
 }
 
 /* --------------- templates - base.html ---------- */
-.ie-warning-banner{
+#ie-warning-banner{
     display: none;
 }
 
