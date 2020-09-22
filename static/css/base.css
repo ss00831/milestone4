@@ -254,6 +254,12 @@ body {
 }
 
 /* --------------- templates - base.html ---------- */
+.browser-notice {
+    background:yellow;
+    padding-left: 2rem;
+    display: none;
+}
+
 .gift-notice {
     background:#045e19;
 }
@@ -624,5 +630,13 @@ footer{
     }
     .order-number{
         word-wrap: break-word;
+    }
+}
+
+/* Show IE banner on IE10/11 */
+@media screen and (-ms-high-contrast: active),
+       screen and (-ms-high-contrast: none) {
+    .ie-notice {
+        display: block;
     }
 }
