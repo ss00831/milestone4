@@ -1,4 +1,4 @@
-{%  extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% load cart_tools %}
 
@@ -152,4 +152,22 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script type="text/javascript">
+            $('.toast').toast('show');
+
+            /* Sample function that returns boolean in case the browser is Internet Explorer
+            Source: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
+            */
+            function isIE() {
+                ua = navigator.userAgent;
+                /* MSIE used to detect old browsers and Trident used to newer ones*/
+                var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+
+                return is_ie;
+            }
+            /* Create an alert to show if the browser is IE or not */
+            if (isIE()) {
+                alert('We don\'t support the payment function in Internet Explorer. Please use other browsers.');
+            }
+        </script>    
 {% endblock %}
