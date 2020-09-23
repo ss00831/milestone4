@@ -139,11 +139,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'tourprograms/includes/people_input_script.html' %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-
+<script type="text/javascript">
         /* Sample function that returns boolean in case the browser is Internet Explorer
             Source: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
         */
@@ -158,5 +154,7 @@
         if (isIE()) {
             alert('We don\'t support the calendar function in Internet Explorer. Please use other browsers.');
         }
-    </script>   
+    </script>
+{{ block.super }}
+{% include 'tourprograms/includes/people_input_script.html' %}
 {% endblock %}
