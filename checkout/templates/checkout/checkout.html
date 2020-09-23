@@ -161,6 +161,7 @@
             }
             /* Create an alert to show if the browser is IE or not */
             if (isIE()) {
+                document.getElementById("submit-button").disabled = true;                
                 alert('We don\'t support the payment function in Internet Explorer. Please use other browsers.');
             }
         </script>    
