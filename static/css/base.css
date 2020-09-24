@@ -256,10 +256,10 @@ body {
 /* --------------- templates - base.html ---------- */
 #ie-warning-banner{
     display: none;
+    background:yellow;
 }
 
 .browser-notice {
-    background:yellow;
     padding-left: 2rem;
 }
 

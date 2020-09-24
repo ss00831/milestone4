@@ -185,7 +185,7 @@ I want to introduce you to the activities you can do in the area through several
 
 2. The detailed result : Please refer the test sheet as below.
 
-[rev06_testcases_20200918.xlsx](https://github.com/ss00831/milestone4/files/5251302/rev06_testcases_20200918.xlsx)
+[rev07_testcases_20200924.xlsx](https://github.com/ss00831/milestone4/files/5274490/rev07_testcases_20200924.xlsx)
 
 
 3. Bugs
@@ -201,6 +201,7 @@ I want to introduce you to the activities you can do in the area through several
 1. 09/12/2020: Bug testing
 1. 09/13/2020: Full testing
 1. 09/18/2020: Bug testing
+1. 09/24/2020: Internet Explorer testing
 
 
 ## deployment
