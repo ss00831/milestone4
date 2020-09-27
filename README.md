@@ -291,11 +291,21 @@ git remote -v
 
 To clone this project from GitHub :
 1. Click [Code] - [Download ZIP] on the repository page.
-2. Unzip the milestone3-master.zip file.
-3. Open Git Bash on your local IDE.
-4. (Optional) Change the current working directory to the location where you want the cloned directory to be made.
-5. Move to the milestone3-master folder
-6. Install the requirement files as below.
+2. Unzip the milestone4-master.zip file.
+3. Open milestone4-master - milestone4-master - lapland_in_sweden - setting.py: Open with Notepad program or any other code edit program
+4. Added this code as below.
+```
+import os
+import dj_database_url
+
+# Type this code (2 lines) under "import dj_database_url"
+if os.path.exists('env.py'):
+    import env
+```
+5. Open Git Bash on your local IDE.
+6. (Optional) Change the current working directory to the location where you want the cloned directory to be made.
+7. Move to the milestone3-master folder
+8. Install the requirement files as below.
 ```
 pip3 install -r requirements.txt
 ```
@@ -303,7 +313,7 @@ pip3 install -r requirements.txt
 ```
 python -m pip install --upgrade pip
 ```
-7. Make "env.py" file and write as below in the file.
+9. Make "env.py" file and write as below in the file.
 ```
 import os
 
@@ -318,16 +328,16 @@ os.environ["STRIPE_SECRET_KEY"] = "YOUR VALUE"
 os.environ["STRIPE_WH_SECRET"] = "YOUR VALUE"
 os.environ["USE_AWS"] = "True"
 ```
-8. Add "env.py" in .gitignore file.
-9. Migrate models into database.
+10. Add "env.py" in .gitignore file.
+11. Migrate models into database.
 ```
 python manage.py migrate
 ```
-10. Create a superuser
+12. Create a superuser
 ```
 python manage.py createsuperuser
 ```
-11. Run the server
+13. Run the server
 ```
 python manage.py runserver
 ```
