@@ -183,12 +183,33 @@ I want to introduce you to the activities you can do in the area through several
 - All input data cases (53 items) + card number test (36 cases): All pass
 - All authenticated status test cases (9 items): All pass
 
-2. The detailed result : Please refer the test sheet as below.
+2. Responsive and browser test
 
-[rev07_testcases_20200924.xlsx](https://github.com/ss00831/milestone4/files/5274490/rev07_testcases_20200924.xlsx)
+- Responsive test
 
+| Browser\Resolution | >= 992 px | >= 768 px (Tablet size) | >= 576 px | >= 414 px (iPhone Plus) |>= 320 px (iPhone 5/SE)|
+|:-------:|:-------:|:-----------------:|:--:|:--: |:--: |
+| Safari        | Pass       |  Pass    | Pass   | Pass | Pass |
+| Chrome        | Pass       |  Pass    | Pass   | Pass | Pass |
+| Firefox       | Pass       |  Pass    | Pass   | Pass | Pass |
+| Internet Explorer   | Pass       |  Pass    | Pass   | Pass | Pass |
+| Edge          | Pass       |  Pass    | Pass   | Pass | Pass |
 
-3. Bugs
+- IE warning message window test
+
+| Browser\Test Item | Alert? | Expect result | Warning box | Expect result |Result|
+|:-------:|:-------:|:-----------------:|:--:|:--: |:--: |
+| Safari        | No       |  No    | No   | No | Pass |
+| Chrome        | No       |  No    | No   | No | Pass |
+| Firefox       | No       |  No    | No   | No | Pass |
+| Internet Explorer   | Yes       |  Yes    | Yes   | Yes | Pass |
+| Edge          | No       |  No    | No   | No | Pass |
+
+3. The detailed result : Please refer the test sheet as below.
+
+[rev08_testcases_20200927.xlsx](https://github.com/ss00831/milestone4/files/5288878/rev08_testcases_20200927.xlsx)
+
+4. Bugs
 - Internet Explorer 11
     - Not able to select a date in tourprogram_detail.html
     - Not able to input card number and if I don't input any card number and just click complete order, the order is successed.
@@ -202,6 +223,7 @@ I want to introduce you to the activities you can do in the area through several
 1. 09/13/2020: Full testing
 1. 09/18/2020: Bug testing
 1. 09/24/2020: Internet Explorer testing
+1. 09/27/2020: Full testing
 
 
 ## deployment
@@ -346,6 +368,7 @@ python manage.py runserver
 
 
 ### Acknowledgements
+0. Inspiration: https://www.kirunalapland.se/en/
 1. Code Institute: Boutique Ado project video was helpful for this project.
 2. Slack community: I can find many solutions.
 3. Django Admin Url : https://stackoverflow.com/questions/44130643/django-admin-urls
@@ -354,3 +377,5 @@ python manage.py runserver
 6. Django form always shows error “This field is required”: https://stackoverflow.com/questions/5806059/django-form-always-shows-error-this-field-is-required
 7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 8. Check if browser is Internet Explorer: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
+9. Stop to support Internet Explorer: Microsoft’s services will drop support for IE11 in a year
+ - https://www.theverge.com/2020/8/17/21372487/microsoft-internet-explorer-11-support-end-365-legacy-edge
