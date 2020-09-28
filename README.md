@@ -173,8 +173,8 @@ I want to introduce you to the activities you can do in the area through several
         1. F401 'xxxxxx' imported but unused
         1. F841 local variable 'e' is assigned to but never used: checkout\webhook.py
         1. E501 line too long (92 > 79 characters): checkout\views.py
-        1. E501 line too long (87 > 79 characters): lapland_in_sweden/settings.py
-    2. http://pep8online.com/: 1 error - checkout\views.py, 1 error - lapland_in_sweden/settings.py
+        1. E501 line too long (87 > 79 characters): lapland_in_sweden\settings.py
+    2. http://pep8online.com/: 1 error - checkout\views.py, 1 error - lapland_in_sweden\settings.py
 
 ### Manual Testing
 1. Usability Test
@@ -380,7 +380,7 @@ python manage.py runserver
 ### Acknowledgements
 0. Inspiration: https://www.kirunalapland.se/en/
 1. Code Institute: Boutique Ado project video was helpful for this project.
-2. Slack community: I can find many solutions.
+2. Slack community: I have found many solutions.
 3. Django Admin Url : https://stackoverflow.com/questions/44130643/django-admin-urls
 4. Sending email : https://docs.djangoproject.com/en/3.1/topics/email/
 5. ChoiceField – Django Forms : https://www.geeksforgeeks.org/choicefield-django-forms/

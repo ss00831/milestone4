@@ -1,6 +1,10 @@
 from django import forms
 
 
+"""
+ChoiceField – Django Forms :
+    https://www.geeksforgeeks.org/choicefield-django-forms/
+"""
 CONTACT_TYPE = (
     ("1", "General question"),
     ("2", "Group tour"),

@@ -78,6 +78,7 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
+                                        <!-- Django Admin Url : https://stackoverflow.com/questions/44130643/django-admin-urls -->
                                         <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Mode</a>
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>

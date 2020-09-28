@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from .forms import ContactForm
 
 
+# Sending email : https://docs.djangoproject.com/en/3.1/topics/email/
 def contact(request):
     """ Display the user's profile. """
     contact_form = ContactForm(request.POST or None)
