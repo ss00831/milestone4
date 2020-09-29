@@ -197,7 +197,7 @@ I want to introduce you to the activities you can do in the area through several
 
 - IE warning message window test
 
-| Browser\Test Item | Alert? | Expect result | Warning box | Expect result |Result|
+| Browser\Test Item | Alert? | Expect result | Warning box? | Expect result |Result|
 |:-------:|:-------:|:-----------------:|:--:|:--: |:--: |
 | Safari        | No       |  No    | No   | No | Pass |
 | Chrome        | No       |  No    | No   | No | Pass |
