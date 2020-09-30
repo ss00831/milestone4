@@ -16,4 +16,4 @@ class TestOrderForm(TestCase):
     def test_correct_message(self):
         form = OrderForm({'form': ''})
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors['full_name'], [u'Required field.'])
+        self.assertEqual(form.errors['full_name'], [u'This field is required.'])

@@ -33,3 +33,7 @@ class TourprogramModelTests(TestCase):
     def test_tourprograms_description(self):
         tourprogram = Tourprogram.objects.get(id=1)
         self.assertEqual(tourprogram.description, "Test")
+
+    def test_tourprograms_image(self):
+        tourprogram = Tourprogram.objects.get(id=1)
+        self.assertEqual(tourprogram.image, '')

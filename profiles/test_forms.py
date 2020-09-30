@@ -4,7 +4,7 @@ from .forms import UserProfileForm
 
 # Create your tests here.
 class TestUserProfileForms(TestCase):
-    def test_create_profile_form_with_required_fields_filled(self):
+    def test_create_profile_form_filled(self):
         form = UserProfileForm({
             'full_name': 'tester',
             'email': 'testing@gmail.com',

@@ -10,7 +10,7 @@ class TestProfileViews(TestCase):
         User.objects.create_user(
             username="Mimi", email="mimi@test.com", password="xmdnltmxmzld1!")
 
-    def test_logged_in_user_Profile_view_(self):
+    def test_user_Profile_view(self):
         user = self.client.login(
             email="mimi@test.com", password="xmdnltmxmzld1!")
         resp = self.client.get(reverse('profile'))

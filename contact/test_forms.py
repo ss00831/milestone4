@@ -15,7 +15,7 @@ class TestContactForm(TestCase):
             'message': 'Can you speak Korean?'})
         self.assertTrue(form.is_valid())
 
-    def test_correct_message(self):
+    def test_success_message(self):
         form = ContactForm({'form': ''})
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['name'], [u'This field is required.'])
