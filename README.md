@@ -225,6 +225,19 @@ I want to introduce you to the activities you can do in the area through several
 1. 09/24/2020: Internet Explorer testing
 1. 09/27/2020: Full testing
 
+### Automated Testing
+- I used TestCase(a suite in Django), and I created test_models.py, test_forms.py and test_views.py.
+* If you want to run the test codes, you need to turn on debug mode and test server.
+1. Run the tests
+```
+python3 manage.py test
+```
+
+2. Check the coverage report
+```
+coverage report
+```
+
 
 ## deployment
 
