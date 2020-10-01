@@ -140,21 +140,22 @@
 
 {% block postloadjs %}
 <script type="text/javascript">
-        /* Sample function that returns boolean in case the browser is Internet Explorer
-            Source: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
-        */
-        function isIE() {
-            ua = navigator.userAgent;
-            /* MSIE used to detect old browsers and Trident used to newer ones*/
-            var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+    /* 
+    Sample function that returns boolean in case the browser is Internet Explorer
+    Source: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
+    */
+    function isIE() {
+        ua = navigator.userAgent;
+        /* MSIE used to detect old browsers and Trident used to newer ones*/
+        var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
 
-            return is_ie;
-        }
-        /* Create an alert to show if the browser is IE or not */
-        if (isIE()) {
-            alert('We don\'t support the calendar function in Internet Explorer. Please use other browsers.');
-        }
-    </script>
+        return is_ie;
+    }
+    /* Create an alert to show if the browser is IE or not */
+    if (isIE()) {
+        alert('We don\'t support the calendar function in Internet Explorer. Please use other browsers.');
+    }
+</script>
 {{ block.super }}
 {% include 'tourprograms/includes/people_input_script.html' %}
 {% endblock %}

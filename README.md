@@ -173,8 +173,8 @@ I want to introduce you to the activities you can do in the area through several
         1. F401 'xxxxxx' imported but unused
         1. F841 local variable 'e' is assigned to but never used: checkout\webhook.py
         1. E501 line too long (92 > 79 characters): checkout\views.py
-        1. E501 line too long (87 > 79 characters): lapland_in_sweden\settings.py
-    2. http://pep8online.com/: 1 error - checkout\views.py, 1 error - lapland_in_sweden\settings.py
+        1. E501 line too long - AUTH_PASSWORD_VALIDATORS: lapland_in_sweden\settings.py
+    2. http://pep8online.com/: 1 error - checkout\views.py, 4 error (about AUTH_PASSWORD_VALIDATORS) - lapland_in_sweden\settings.py
 
 ### Manual Testing
 
