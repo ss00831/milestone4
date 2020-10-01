@@ -84,7 +84,7 @@ I want to introduce you to the activities you can do in the area through several
 7. Cart - Your cart - Checkour page - Checkout success page
 
 ### Database
-1. category
+1. categories
 
 | Field Name    | data type |
 |---------------|-----------|
@@ -177,6 +177,9 @@ I want to introduce you to the activities you can do in the area through several
     2. http://pep8online.com/: 1 error - checkout\views.py, 1 error - lapland_in_sweden\settings.py
 
 ### Manual Testing
+
+#### Manual testing test sheet & the result: [rev08_testcases_20200927.xlsx](https://github.com/ss00831/milestone4/files/5288878/rev08_testcases_20200927.xlsx)
+
 1. Usability Test
 - All functional test cases (91 items)
     - Added 4 cases 
@@ -400,5 +403,4 @@ python manage.py runserver
 6. Django form always shows error “This field is required”: https://stackoverflow.com/questions/5806059/django-form-always-shows-error-this-field-is-required
 7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 8. Check if browser is Internet Explorer: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
-9. Stop to support Internet Explorer: Microsoft’s services will drop support for IE11 in a year
- - https://www.theverge.com/2020/8/17/21372487/microsoft-internet-explorer-11-support-end-365-legacy-edge
+9. Stop to support Internet Explorer - Microsoft’s services will drop support for IE11 in a year: https://www.theverge.com/2020/8/17/21372487/microsoft-internet-explorer-11-support-end-365-legacy-edge
