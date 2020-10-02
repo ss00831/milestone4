@@ -181,8 +181,7 @@ I want to introduce you to the activities you can do in the area through several
 #### Manual testing test sheet & the result: [rev08_testcases_20200927.xlsx](https://github.com/ss00831/milestone4/files/5288878/rev08_testcases_20200927.xlsx)
 
 1. Usability Test
-- All functional test cases (91 items)
-    - Added 4 cases 
+- All functional test cases (91 items): All pass
 - All input data cases (53 items) + card number test (36 cases): All pass
 - All authenticated status test cases (9 items): All pass
 
@@ -394,7 +393,9 @@ python manage.py runserver
 
 
 ### Acknowledgements
-0. Inspiration: https://www.kirunalapland.se/en/
+
+* Inspiration: https://www.kirunalapland.se/en/
+
 1. Code Institute: Boutique Ado project video was helpful for this project.
 2. Slack community: I have found many solutions.
 3. Django Admin Url : https://stackoverflow.com/questions/44130643/django-admin-urls
