@@ -4,6 +4,7 @@ from django.urls import reverse
 
 
 # Create your tests here.
+# https://docs.djangoproject.com/en/3.1/topics/testing/tools/
 class TestProfileViews(TestCase):
     @classmethod
     def setUpTestData(cls):

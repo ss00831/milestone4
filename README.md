@@ -240,7 +240,6 @@ python3 manage.py test
 coverage report
 ```
 
-
 ## deployment
 
 #### My Milestone4 page address: https://lapland-in-sweden.herokuapp.com/
@@ -405,3 +404,5 @@ python manage.py runserver
 7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 8. Check if browser is Internet Explorer: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
 9. Stop to support Internet Explorer - Microsoft’s services will drop support for IE11 in a year: https://www.theverge.com/2020/8/17/21372487/microsoft-internet-explorer-11-support-end-365-legacy-edge
+10. Django automated testing: https://docs.djangoproject.com/en/3.1/topics/testing/
+11. Testing a Django web application: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing

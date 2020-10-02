@@ -3,6 +3,7 @@ from .forms import UserProfileForm
 
 
 # Create your tests here.
+# https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
 class TestUserProfileForms(TestCase):
     def test_create_profile_form_filled(self):
         form = UserProfileForm({

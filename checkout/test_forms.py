@@ -3,6 +3,7 @@ from .forms import OrderForm
 
 
 # Create your tests here.
+# https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
 class TestOrderForm(TestCase):
 
     def test_create_order(self):

@@ -3,6 +3,7 @@ from .forms import ContactForm
 
 
 # Create your tests here.
+# https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
 class TestContactForm(TestCase):
     def test_send_message(self):
         form = ContactForm({

@@ -5,6 +5,7 @@ from tourprograms.models import Tourprogram
 # Create your tests here.
 class TourprogramModelTests(TestCase):
 
+    # https://docs.djangoproject.com/en/3.1/topics/testing/tools/
     @classmethod
     def setUpTestData(cls):
         Tourprogram.objects.create(
