@@ -46,7 +46,7 @@ I want to introduce you to the activities you can do in the area through several
 
 ### Features Left to Implement
 1. tourprograms app - tourprogram_detail.html: Make the number of child input box
-2. Feature of real time chatting
+2. Feature of real-time chatting
 
 ## Information Architecture
 
@@ -81,7 +81,7 @@ I want to introduce you to the activities you can do in the area through several
 - My profile: Profile form / Booking history
 - Login / Logout
 
-7. Cart - Your cart - Checkour page - Checkout success page
+7. Cart - Your cart - Checkout page - Checkout success page
 
 ### Database
 1. categories
@@ -207,14 +207,14 @@ I want to introduce you to the activities you can do in the area through several
 | Internet Explorer   | Yes       |  Yes    | Yes   | Yes | Pass |
 | Edge          | No       |  No    | No   | No | Pass |
 
-3. The detailed result : Please refer the test sheet as below.
+3. The detailed result : Please refer to the test sheet as below.
 
 [rev08_testcases_20200927.xlsx](https://github.com/ss00831/milestone4/files/5288878/rev08_testcases_20200927.xlsx)
 
 4. Bugs
 - Internet Explorer 11
     - Not able to select a date in tourprogram_detail.html
-    - Not able to input card number and if I don't input any card number and just click complete order, the order is succeeded.
+    - Not able to input a card number and if I don't input any card number and just click complete order, the order is succeeded.
   +) Added notice about IE 11: We don't support IE fully. (09/18/2020 - fixed)
 
 ### Testing history
@@ -255,19 +255,19 @@ pip3 freeze > requirements.txt
 ```
 web: gunicorn lapland_in_sweden.wsgi:application
 ```
-3. Login heroku
-4. Setting Config Vars : Heroku homepage - Select "lapland-in-sweden" project - Setting - Click "Reveal Config Vars" - Create Config Vars as below and save
+3. Login Heroku
+4. Setting Config Vars: Heroku homepage - Select "lapland-in-sweden" project - Setting - Click "Reveal Config Vars" - Create Config Vars as below and save
 ![setting_heroku](https://user-images.githubusercontent.com/53374745/92122129-5fea8280-edfb-11ea-8942-1d732091678c.JPG)
- 1) AWS_ACCESS_KEYID, AWS_SECRET_ACCESS_KEY: You can get a csv file which includes the key information when you create staticfiles-user. Find the keys and copy and paste on the fields.
+ 1) AWS_ACCESS_KEYID, AWS_SECRET_ACCESS_KEY: You can get a csv file, which includes the key information when you create staticfiles-user. Find the keys and copy and paste them on the fields.
  2) DATABASE_URL
  - The value will be created when you create a new Postgres database.
  3) EMAIL_HOST_PASS 
- - You can get the value in app password generator in Gmail. The value is 16 character.
+ - You can get the value in the app password generator in Gmail. The value is 16 character.
  4) EMAIL_HOST_USER
  - Your gmail address
  5) SECRET_KEY 
- - Go to https://miniwebtool.com/django-secret-key-generator/ and click "Generate Django Secret Key"
- - The generated Django Secret Key length is 50 character. Use this value.
+ - Go to https://miniwebtool.com/django-secret-key-generator/ and click "Generate Django Secret Key".
+ - The generated Django Secret Key length is 50 characters. Use this value.
  6) STRIPE_PUBLIC_KEY 
  - Go to Stripe.com and login -> Dashboard -> Developers -> API Keys -> Copy "Publishable key"
  7) STRIPE_SECRET_KEY 
@@ -297,7 +297,7 @@ git remote -v
 ```
 
 7. Run the webpage
-- Click "Open app" button on the Heroku dashboard page or write https://lapland-in-sweden.herokuapp.com/ on your web browser.
+- Click the "Open app" button on the Heroku dashboard page or write https://lapland-in-sweden.herokuapp.com/ on your web browser.
 
 #### AWS Amazon: Store static files and media files. 
 
@@ -327,7 +327,7 @@ pip3 install -r requirements.txt
 ```
 python -m pip install --upgrade pip
 ```
-9. Make "env.py" file and write as below in the file.
+9. Make "env.py" file and write below in the file.
 ```
 import os
 
@@ -343,7 +343,7 @@ os.environ["STRIPE_WH_SECRET"] = "YOUR VALUE"
 os.environ["USE_AWS"] = "True"
 ```
 10. Add "env.py" in .gitignore file.
-11. Migrate models into database.
+11. Migrate models into the database.
 ```
 python manage.py migrate
 ```
@@ -397,9 +397,9 @@ python manage.py runserver
 
 1. Code Institute: Boutique Ado project video was helpful for this project.
 2. Slack community: I have found many solutions.
-3. Django Admin Url : https://stackoverflow.com/questions/44130643/django-admin-urls
-4. Sending email : https://docs.djangoproject.com/en/3.1/topics/email/
-5. ChoiceField – Django Forms : https://www.geeksforgeeks.org/choicefield-django-forms/
+3. Django Admin Url: https://stackoverflow.com/questions/44130643/django-admin-urls
+4. Sending email: https://docs.djangoproject.com/en/3.1/topics/email/
+5. ChoiceField – Django Forms: https://www.geeksforgeeks.org/choicefield-django-forms/
 6. Django form always shows error “This field is required”: https://stackoverflow.com/questions/5806059/django-form-always-shows-error-this-field-is-required
 7. How to keep your footer where it belongs?: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 8. Check if browser is Internet Explorer: https://jsfiddle.net/alvaroAV/svvz7tkn/ 
