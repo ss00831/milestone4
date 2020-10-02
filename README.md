@@ -2,9 +2,9 @@
 
 ## The site address: https://lapland-in-sweden.herokuapp.com/
 
-The country where I live in Sweden has various cultures by county. Currently, I live in Kiruna, where is the north part (Norrbotten county), and many hikers visit the county for climbing and many tourists who want to see the Northern Lights in the winter or enjoy winter activities. On the one hand, Kiruna is also a city famous for mining, so you can also take a guided tour of the mines.
+Sweden has various cultures by county. Currently, I live in Kiruna, the north part (Norrbotten county). Many hikers visit the county for climbing and many tourists who want to see the Northern Lights in the winter or enjoy winter activities. On the one hand, Kiruna is also a city famous for mining, so you can also take a guided tour of the mines.
 
-I want to introduce you to the activities you can do in the area through several tour products, while also selling tour products that will help tourists travel efficiently.
+I want to introduce you to the activities you can do in the area through several tour products, while also selling tour products to help tourists travel efficiently.
 
 ## UX
 
@@ -174,7 +174,7 @@ I want to introduce you to the activities you can do in the area through several
         1. F841 local variable 'e' is assigned to but never used: checkout\webhook.py
         1. E501 line too long (92 > 79 characters): checkout\views.py
         1. E501 line too long - AUTH_PASSWORD_VALIDATORS: lapland_in_sweden\settings.py
-    2. http://pep8online.com/: 1 error - checkout\views.py, 4 error (about AUTH_PASSWORD_VALIDATORS) - lapland_in_sweden\settings.py
+    2. http://pep8online.com/: 1 error - checkout\views.py, 4 error (AUTH_PASSWORD_VALIDATORS) - lapland_in_sweden\settings.py
 
 ### Manual Testing
 
@@ -215,7 +215,7 @@ I want to introduce you to the activities you can do in the area through several
 4. Bugs
 - Internet Explorer 11
     - Not able to select a date in tourprogram_detail.html
-    - Not able to input card number and if I don't input any card number and just click complete order, the order is successed.
+    - Not able to input card number and if I don't input any card number and just click complete order, the order is succeeded.
   +) Added notice about IE 11: We don't support IE fully. (09/18/2020 - fixed)
 
 ### Testing history
